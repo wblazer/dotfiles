@@ -1,0 +1,9 @@
+[alias]
+	st = status
+[pull]
+	rebase = true
+[user]
+	name = William Blazer
+	email = 82427064+wblazer@users.noreply.github.com
+[init]
+	defaultBranch = main
