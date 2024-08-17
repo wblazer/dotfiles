@@ -61,6 +61,9 @@ map('<', '<<');
 // ---- Unmap -----
 unmap('og');
 unmap('oy');
+unmap('<Ctrl-h>');
+unmap('<Ctrl-j>');
+unmap('<Ctrl-Alt-i>');
 
 // ---- Search Engines -----
 removeSearchAlias('b', 's');

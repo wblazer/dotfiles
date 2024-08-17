@@ -340,5 +340,5 @@ user_pref("browser.uidensity", 1);
  * MY STUFF
 ****************************************************************************/
 // Disable alt key opening menu
-user_pref("ui.key.menuAccessKeyFocuses, false");
+user_pref("ui.key.menuAccessKeyFocuses", false);
 user_pref("ui.key.menuAccessKey", 0);
