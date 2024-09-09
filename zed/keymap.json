@@ -13,16 +13,16 @@
       "ctrl--": "zed::DecreaseBufferFontSize",
       "ctrl-0": "zed::ResetBufferFontSize",
       "f11": "zed::ToggleFullScreen",
+      "enter": "menu::Confirm",
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
     }
   },
   {
     "context": "VimControl || Dock",
-    "bindings": {
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
-    }
+    "bindings": {}
   },
   {
     "context": "Terminal",
@@ -154,16 +154,9 @@
   {
     "context": "AssistantPanel",
     "bindings": {
-      "ctrl-n": "search::SelectNextMatch",
-      "ctrl-shift-n": "search::SelectPrevMatch",
-      "alt-m": "assistant::ToggleModelSelector"
-    }
-  },
-  {
-    "context": "AssistantPanel && vim_mode == normal",
-    "bindings": {
-      "space h": "assistant::DeployHistory",
-      "space l": "assistant::DeployPromptLibrary"
+      "ctrl-alt-h": "assistant::DeployHistory",
+      "alt-m": "assistant::ToggleModelSelector",
+      "alt-p": "assistant::DeployPromptLibrary"
     }
   },
   {
@@ -244,6 +237,7 @@
     "context": "Pane",
     "bindings": {
       "ctrl-w": "pane::CloseActiveItem",
+      "alt-w": "pane::CloseActiveItem",
       "ctrl-shift-f": "project_search::ToggleFocus",
       "ctrl-alt-g": "search::SelectNextMatch",
       "ctrl-alt-shift-g": "search::SelectPrevMatch",
@@ -251,7 +245,7 @@
       "ctrl-alt-shift-l": "search::ToggleSelection",
       "alt-enter": "search::SelectAllMatches",
       "alt-c": "search::ToggleCaseSensitive",
-      "alt-w": "search::ToggleWholeWord",
+      // "alt-w": "search::ToggleWholeWord",
       "alt-r": "search::ToggleRegex",
       "alt-ctrl-f": "project_search::ToggleFilters",
       "ctrl-alt-shift-r": "search::ToggleRegex",
@@ -301,7 +295,7 @@
     "context": "Editor && showing_completions",
     "bindings": {
       // "enter": "editor::ConfirmCompletion",
-      "ctrl-;": "editor::ComposeCompletion"
+      "ctrl-;": "editor::ConfirmCompletion"
     }
   },
   {
@@ -352,7 +346,7 @@
       "ctrl->": "assistant::QuoteSelection",
       "ctrl-<": "assistant::InsertIntoEditor",
       "shift-enter": "assistant::Split",
-      "ctrl-r": "assistant::CycleMessageRole",
+      "alt-r": "assistant::CycleMessageRole",
       "enter": "assistant::ConfirmCommand",
       "alt-enter": "editor::Newline"
     }
@@ -388,7 +382,6 @@
       "right": "project_panel::ExpandSelectedEntry",
       "ctrl-c": "project_panel::CopyPath",
       "ctrl-shift-c": "project_panel::CopyRelativePath",
-      "enter": "project_panel::Rename",
       "backspace": ["project_panel::Trash", { "skip_prompt": false }],
       "shift-delete": ["project_panel::Delete", { "skip_prompt": false }],
       "delete": ["project_panel::Trash", { "skip_prompt": false }],
@@ -425,7 +418,6 @@
       "backspace": ["project_panel::Trash", { "skip_prompt": false }],
       "o": "project_panel::OpenPermanent",
       "enter": "project_panel::OpenPermanent",
-      "p": "project_panel::Open",
       "space": "project_panel::Open",
       "s": "project_panel::RevealInFileManager",
       "shift-g": "menu::SelectLast",
@@ -503,6 +495,7 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
+      "space space": "file_finder::Toggle",
       "i": ["vim::PushOperator", { "Object": { "around": false } }],
       "a": ["vim::PushOperator", { "Object": { "around": true } }],
       "h": "vim::Left",
@@ -519,7 +512,7 @@
       "up": "vim::Up",
       "l": "vim::Right",
       "right": "vim::Right",
-      "space": "vim::Space",
+      // "space": "vim::Space",
       "$": "vim::EndOfLine",
       "end": "vim::EndOfLine",
       "^": "vim::FirstNonWhitespace",
@@ -544,7 +537,7 @@
       "shift-b": ["vim::PreviousWordStart", { "ignorePunctuation": true }],
       "g shift-e": ["vim::PreviousWordEnd", { "ignorePunctuation": true }],
       "/": "vim::Search",
-      "g /": "pane::DeploySearch",
+      "space /": "pane::DeploySearch",
       "?": ["vim::Search", { "backwards": true }],
       "*": "vim::MoveToNext",
       "#": "vim::MoveToPrev",
@@ -791,7 +784,7 @@
       "ctrl-space": "editor::ShowCompletions",
       "ctrl-x ctrl-a": "assistant::InlineAssist", // zed specific
       "ctrl-x ctrl-c": "editor::ShowInlineCompletion", // zed specific
-      "ctrl-x ctrl-l": "editor::ToggleCodeActions", // zed specific
+      // "ctrl-x ctrl-l": "editor::ToggleCodeActions", // zed specific
       "ctrl-x ctrl-z": "editor::Cancel",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
       "ctrl-u": "editor::DeleteToBeginningOfLine",
@@ -935,7 +928,7 @@
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       ":": "command_palette::Toggle",
-      "g /": "pane::DeploySearch"
+      "space /": "pane::DeploySearch"
     }
   },
   {

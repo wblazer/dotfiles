@@ -28,29 +28,29 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine Moon"
+    "dark": "Gruvbox Dark"
   },
 
-  "experimental.theme_overrides": {
-    "background": "#80808040",
-    "editor.background": "#000000E8",
-    "editor.gutter.background": "#000000E8",
-    "editor.active_line.background": "#FFFFFF01",
-    "editor.document_highlight.read_background": "#FFFFFF06",
-    "tab_bar.background": "#000000EC",
-    "terminal.background": "#00000000",
-    "toolbar.background": "#000000EC",
-    "tab.active_background": "#45858820",
-    "tab.inactive_background": "#00000000",
-    "status_bar.background": "#101010F8",
-    "title_bar.background": "#101010F8",
-    "title_bar.inactive_background": "#101010F0",
-    "panel.background": "#000000EC",
-    "border.variant": "#000000E0",
-    "scrollbar.track.border": "#000000E0",
-    "scrollbar.thumb.background": "#80808010",
-    "elevated_surface.background": "#181818FF"
-  },
+  // "experimental.theme_overrides": {
+  //   "background": "#80808040",
+  //   "editor.background": "#000000E8",
+  //   "editor.gutter.background": "#000000E8",
+  //   "editor.active_line.background": "#FFFFFF01",
+  //   "editor.document_highlight.read_background": "#FFFFFF06",
+  //   "tab_bar.background": "#000000EC",
+  //   "terminal.background": "#00000000",
+  //   "toolbar.background": "#000000EC",
+  //   "tab.active_background": "#45858820",
+  //   "tab.inactive_background": "#00000000",
+  //   "status_bar.background": "#101010F8",
+  //   "title_bar.background": "#101010F8",
+  //   "title_bar.inactive_background": "#101010F0",
+  //   "panel.background": "#000000EC",
+  //   "border.variant": "#000000E0",
+  //   "scrollbar.track.border": "#000000E0",
+  //   "scrollbar.thumb.background": "#80808010",
+  //   "elevated_surface.background": "#181818FF"
+  // },
 
   "centered_layout": {
     "left_padding": 0.15,
@@ -77,6 +77,15 @@
   "formatter": "auto",
 
   "languages": {
+    "Ruby": {
+      "language_servers": ["solargraph", "!ruby-lsp", "!rubocop", "..."]
+    },
+    "ERB": {
+      "tab_size": 2
+    },
+    "HTML": {
+      "tab_size": 2
+    },
     "TypeScript": {
       "code_actions_on_format": {
         "source.organizeImports": true
@@ -91,40 +100,38 @@
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
+    }
+  },
+
+  "lsp": {
+    "solargraph": {
+      "initialization_options": {
+        "diagnostics": true,
+        "formatting": true
+      }
     },
-    "Ruby": {
-      "format_on_save": "off",
-      "language_servers": [
-        "ruby-lsp",
-        "tailwindcss-language-server",
-        "!solargraph",
-        "!rubocop"
-      ]
+    // "ruby-lsp": {
+    //   "initialization_options": {
+    //     "enabledFeatures": {
+    //       "diagnostics": false
+    //     }
+    //   }
+    // },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "erb": "html",
+          "ruby": "html"
+        },
+        "experimental": {
+          "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
+        }
+      }
     },
-    "lsp": {
-      "eslint": {
-        "settings": {
-          "codeActionOnSave": {
-            "rules": ["import/order"]
-          }
-        }
-      },
-      "ruby-lsp": {
-        "initialization_options": {
-          "enabledFeatures": {
-            "diagnostics": false
-          }
-        }
-      },
-      "tailwindcss-language-server": {
-        "settings": {
-          "includeLanguages": {
-            "erb": "html",
-            "ruby": "html"
-          },
-          "experimental": {
-            "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
-          }
+    "eslint": {
+      "settings": {
+        "codeActionOnSave": {
+          "rules": ["import/order"]
         }
       }
     }
