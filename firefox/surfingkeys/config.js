@@ -29,7 +29,7 @@ const {
 // ---- Settings ----
 settings.defaultSearchEngine = 'd';
 settings.hintAlign = 'left';
-settings.omnibarPosition = 'bottom';
+settings.omnibarPosition = 'middle';
 settings.focusFirstCandidate = false;
 settings.focusAfterClosed = 'last';
 settings.scrollStepSize = 140;
