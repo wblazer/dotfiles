@@ -1,0 +1,43 @@
+format = "$username$directory$git_branch$time\n[](bold fg:fg0) "
+
+palette = 'rose_pine'
+
+[palettes.rose_pine]
+bg0 = '#403d52'
+fg0 = '#c4a7e7'
+fg1 = '#9ccfd8'
+fg2 = '#31748f'
+fg3 = '#ebbcba'
+
+[palettes.gruvbox]
+bg0 = '#191724'
+fg0 = '#c4a7e7'
+fg1 = '#9ccfd8'
+fg2 = '#31748f'
+fg3 = '#ebbcba'
+
+[username]
+format = "[](fg:bg0)[ $user ]($style)"
+show_always = true
+style_root = "bg:bg0 fg:fg0"
+style_user = "bg:bg0 fg:fg0"
+
+[directory]
+format = "[ $path ]($style)"
+style = "bg:bg0 fg:fg1"
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[git_branch]
+format = "[ $symbol $branch ]($style)"
+style = "bg:bg0 fg:fg2"
+symbol = ""
+
+[time]
+disabled = false
+format = "[ $time ]($style)[](fg:bg0)"
+style = "bg:bg0 fg:fg3"
+time_format = "%I:%M%P"
+use_12hr = true
+
