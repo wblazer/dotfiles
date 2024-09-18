@@ -17,7 +17,9 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "alt-l": "pane::ActivateNextItem",
+      "alt-h": "pane::ActivatePrevItem"
     }
   },
   {
@@ -156,12 +158,14 @@
     "bindings": {
       "ctrl-alt-h": "assistant::DeployHistory",
       "alt-m": "assistant::ToggleModelSelector",
-      "alt-p": "assistant::DeployPromptLibrary"
+      "alt-p": "assistant::DeployPromptLibrary",
+      "ctrl-t": "assistant::NewContext"
     }
   },
   {
     "context": "PromptLibrary",
     "bindings": {
+      "ctrl-t": "prompt_library::NewPrompt",
       "ctrl-n": "prompt_library::NewPrompt",
       "ctrl-shift-s": "prompt_library::ToggleDefaultPrompt"
     }
@@ -229,8 +233,7 @@
   {
     "context": "Editor && mode == full",
     "bindings": {
-      "ctrl-shift-o": "outline::Toggle",
-      "ctrl-g": "go_to_line::Toggle"
+      "ctrl-shift-o": "outline::Toggle"
     }
   },
   {
@@ -261,16 +264,15 @@
       "ctrl-~": "workspace::NewTerminal",
       "ctrl-s": "workspace::Save",
       "ctrl-shift-s": "workspace::SaveAs",
-      "ctrl-n": "workspace::NewFile",
+      "ctrl-t": "workspace::NewFile",
       // "ctrl-shift-n": "workspace::NewWindow",
       "ctrl-shift-l": "workspace::ToggleRightDock",
       "ctrl-shift-h": "workspace::ToggleLeftDock",
-      "ctrl-e": "workspace::ToggleLeftDock",
       "ctrl-shift-j": "workspace::ToggleBottomDock",
       "ctrl-alt-y": "workspace::CloseAllDocks",
       "ctrl-shift-f": "pane::DeploySearch",
       "ctrl-shift-r": ["pane::DeploySearch", { "replace_enabled": true }],
-      "ctrl-t": "project_symbols::Toggle",
+      "ctrl-g": "project_symbols::Toggle",
       "ctrl-p": "file_finder::Toggle",
       "ctrl-b": "tab_switcher::Toggle",
       "ctrl-shift-p": "command_palette::Toggle",
@@ -349,6 +351,19 @@
       "alt-r": "assistant::CycleMessageRole",
       "enter": "assistant::ConfirmCommand",
       "alt-enter": "editor::Newline"
+    }
+  },
+  {
+    "context": "ContextEditor > Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space t t": ["workspace::SendKeystrokes", "i /tab enter escape"],
+      "space t a": [
+        "workspace::SendKeystrokes",
+        "i /tab space all enter escape"
+      ],
+      "space p": ["workspace::SendKeystrokes", "i /prompt space"],
+      "space d": ["workspace::SendKeystrokes", "i /diagnostics enter escape"],
+      "space w": ["workspace::SendKeystrokes", "i /workflow enter escape"]
     }
   },
   {
@@ -467,6 +482,7 @@
   {
     "context": "Terminal",
     "bindings": {
+      "ctrl-t": "workspace::NewTerminal",
       "ctrl-alt-space": "terminal::ShowCharacterPalette",
       "ctrl-shift-c": "terminal::Copy",
       "ctrl-insert": "terminal::Copy",
@@ -496,6 +512,18 @@
     "context": "VimControl && !menu",
     "bindings": {
       "space space": "file_finder::Toggle",
+      "space n d": "workspace::ClearAllNotifications",
+      "space n o": "notification_panel::ToggleFocus",
+      "space w w": "workspace::ActivateNextPane",
+      "space w d": "pane::CloseAllItems",
+      "space w o": "workspace::CloseInactiveTabsAndPanes",
+      "space w h": "workspace::NewFileSplitVertical",
+      "space w k": "workspace::NewFileSplitHorizontal",
+      "space w c": "pane::JoinIntoNext",
+      "space m h": ["workspace::SwapPaneInDirection", "Left"],
+      "space m l": ["workspace::SwapPaneInDirection", "Right"],
+      "space m j": ["workspace::SwapPaneInDirection", "Down"],
+      "space m k": ["workspace::SwapPaneInDirection", "Up"],
       "i": ["vim::PushOperator", { "Object": { "around": false } }],
       "a": ["vim::PushOperator", { "Object": { "around": true } }],
       "h": "vim::Left",
@@ -636,11 +664,16 @@
       "7": ["vim::Number", 7],
       "8": ["vim::Number", 8],
       "9": ["vim::Number", 9],
-      "alt-l": "pane::ActivateNextItem",
-      "alt-h": "pane::ActivatePrevItem",
       // "ctrl-w space": "editor::OpenExcerptsSplit",
       // "ctrl-w g space": "editor::OpenExcerptsSplit",
       "ctrl-6": "pane::AlternateFile"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "v": "editor::SelectLargerSyntaxNode",
+      "V": "editor::SelectSmallerSyntaxNode"
     }
   },
   {
@@ -651,29 +684,18 @@
       "space g e": "editor::ExpandAllHunkDiffs",
       "space g b": "editor::ToggleGitBlame",
       "space y p": "editor::CopyPath",
-      "space w w": "workspace::ActivateNextPane",
-      "space w d": "pane::CloseAllItems",
-      "space w o": "workspace::CloseInactiveTabsAndPanes",
-      "space w h": "workspace::NewFileSplitVertical",
-      "space w k": "workspace::NewFileSplitHorizontal",
-      "space w c": "pane::JoinIntoNext",
       "space g d": "editor::GoToDefinitionSplit",
       "space g t": "editor::GoToTypeDefinitionSplit",
       "space s l": "pane::SplitRight",
       "space s k": "pane::SplitUp",
       "space s j": "pane::SplitDown",
       "space s h": "pane::SplitLeft",
-      "space m h": ["workspace::SwapPaneInDirection", "Left"],
-      "space m l": ["workspace::SwapPaneInDirection", "Right"],
-      "space m j": ["workspace::SwapPaneInDirection", "Down"],
-      "space m k": ["workspace::SwapPaneInDirection", "Up"],
       "space b d": "pane::CloseActiveItem",
       "space b o": "pane::CloseInactiveItems",
       "space b a": "pane::CloseAllItems",
       "space b u": "pane::CloseCleanItems",
       "space c d": "editor::GoToDiagnostic",
-      "space n d": "workspace::ClearAllNotifications",
-      "space n o": "notification_panel::ToggleFocus",
+      "space t n": "workspace::NewCenterTerminal",
       "escape": "editor::Cancel",
       ":": "command_palette::Toggle",
       ".": "vim::Repeat",
@@ -789,8 +811,8 @@
       "ctrl-x ctrl-z": "editor::Cancel",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
       "ctrl-u": "editor::DeleteToBeginningOfLine",
-      "ctrl-t": "vim::Indent",
-      "ctrl-d": "vim::Outdent",
+      // "ctrl-t": "vim::Indent",
+      // "ctrl-d": "vim::Outdent",
       // "ctrl-k": ["vim::PushOperator", { "Digraph": {} }],
       "ctrl-r": ["vim::PushOperator", "Register"]
     }
