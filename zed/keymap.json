@@ -694,6 +694,8 @@
       "space b o": "pane::CloseInactiveItems",
       "space b a": "pane::CloseAllItems",
       "space b u": "pane::CloseCleanItems",
+      "space b h": "pane::CloseItemsToTheLeft",
+      "space b l": "pane::CloseItemsToTheRight",
       "space c d": "editor::GoToDiagnostic",
       "space t n": "workspace::NewCenterTerminal",
       "escape": "editor::Cancel",
