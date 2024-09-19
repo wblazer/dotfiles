@@ -1,43 +1,56 @@
-format = "$username$directory$git_branch$time\n[](bold fg:fg0) "
 
-palette = 'rose_pine'
+format = """
+[](fg:bg0)\
+$username\
+[](fg:bg0 bg:bg1)\
+$directory\
+[](fg:bg1 bg:bg2)\
+$git_branch\
+[](fg:bg2 bg:bg3)\
+$time\
+[](fg:bg3)\
+\n[](bold fg:bg0) """
+
+palette = 'gruvbox'
 
 [palettes.rose_pine]
-bg0 = '#403d52'
-fg0 = '#c4a7e7'
-fg1 = '#9ccfd8'
-fg2 = '#31748f'
-fg3 = '#ebbcba'
+fg0 = '#e0def4'
+fg1 = '#191724'
+bg0 = '#9ccfd8'
+bg1 = '#c4a7e7'
+bg2 = '#ebbcba'
+bg3 = '#eb6f92'
 
 [palettes.gruvbox]
-bg0 = '#191724'
-fg0 = '#c4a7e7'
-fg1 = '#9ccfd8'
-fg2 = '#31748f'
-fg3 = '#ebbcba'
+fg0 = '#ebdbb2'
+fg1 = '#282828'
+bg0 = '#b8bb26'
+bg1 = '#8ec07c'
+bg2 = '#83a598'
+bg3 = '#fb4934'
 
 [username]
-format = "[](fg:bg0)[ $user ]($style)"
+format = "[ $user ]($style)"
 show_always = true
-style_root = "bg:bg0 fg:fg0"
-style_user = "bg:bg0 fg:fg0"
+style_root = "bg:bg0 fg:fg1"
+style_user = "bg:bg0 fg:fg1"
 
 [directory]
 format = "[ $path ]($style)"
-style = "bg:bg0 fg:fg1"
+style = "bg:bg1 fg:fg1"
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = false
 
 [git_branch]
 format = "[ $symbol $branch ]($style)"
-style = "bg:bg0 fg:fg2"
+style = "bg:bg2 fg:fg1"
 symbol = ""
 
 [time]
 disabled = false
-format = "[ $time ]($style)[](fg:bg0)"
-style = "bg:bg0 fg:fg3"
+format = "[ $time ]($style)"
+style = "bg:bg3 fg:fg1"
 time_format = "%I:%M%P"
 use_12hr = true
 
