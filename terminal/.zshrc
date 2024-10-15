@@ -69,6 +69,7 @@ alias r='rails'
 alias bat='batcat'
 alias lzg='lazygit'
 alias lzd='lazydocker'
+alias mux='tmuxinator'
 
 # Git
 alias gcm='git commit -m'

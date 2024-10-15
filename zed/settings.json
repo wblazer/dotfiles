@@ -28,7 +28,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine Moon"
+    "dark": "Gruvbox Material"
   },
 
   // "experimental.theme_overrides": {

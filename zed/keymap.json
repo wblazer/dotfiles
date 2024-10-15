@@ -156,7 +156,7 @@
   {
     "context": "AssistantPanel",
     "bindings": {
-      "ctrl-alt-h": "assistant::DeployHistory",
+      "alt-b": "assistant::DeployHistory",
       "alt-m": "assistant::ToggleModelSelector",
       "alt-p": "assistant::DeployPromptLibrary",
       "ctrl-t": "assistant::NewContext"
@@ -296,7 +296,7 @@
   {
     "context": "Editor && showing_completions",
     "bindings": {
-      // "enter": "editor::ConfirmCompletion",
+      // "tab": "editor::ComposeCompletion",
       "ctrl-;": "editor::ConfirmCompletion"
     }
   },
@@ -362,8 +362,16 @@
         "i /tab space all enter escape"
       ],
       "space p": ["workspace::SendKeystrokes", "i /prompt space"],
-      "space d": ["workspace::SendKeystrokes", "i /diagnostics enter escape"],
-      "space w": ["workspace::SendKeystrokes", "i /workflow enter escape"]
+      "space e": ["workspace::SendKeystrokes", "i /diagnostics enter escape"],
+      "space w": ["workspace::SendKeystrokes", "i /workflow enter escape"],
+      "space l": [
+        "workspace::SendKeystrokes",
+        "i /fetch space escape p o escape"
+      ],
+      "space f": ["workspace::SendKeystrokes", "i /fetch space"],
+      "space d": ["workspace::SendKeystrokes", "i /default enter escape"],
+      "space a": ["workspace::SendKeystrokes", "i /file space .zed/assistant/"],
+      "space u": ["workspace::SendKeystrokes", "i /delta enter escape"]
     }
   },
   {
@@ -373,7 +381,7 @@
     }
   },
   {
-    "context": "OutlinePanel",
+    "context": "OutlinePanel && not_editing",
     "bindings": {
       "escape": "menu::Cancel",
       "left": "outline_panel::CollapseSelectedEntry",
@@ -383,7 +391,7 @@
       "ctrl-alt-c": "outline_panel::CopyPath",
       "alt-ctrl-shift-c": "outline_panel::CopyRelativePath",
       "alt-ctrl-r": "outline_panel::RevealInFileManager",
-      "space": "outline_panel::Open",
+      "space": ["outline_panel::Open", { "change_selection": false }],
       "shift-down": "menu::SelectNext",
       "shift-up": "menu::SelectPrev",
       "shift-j": "menu::SelectNext",
@@ -546,6 +554,8 @@
       "^": "vim::FirstNonWhitespace",
       "_": "vim::StartOfLineDownward",
       "g _": "vim::EndOfLineDownward",
+      "(": "vim::SentenceBackward",
+      ")": "vim::SentenceForward",
       "shift-g": "vim::EndOfDocument",
       "{": "vim::StartOfParagraph",
       "}": "vim::EndOfParagraph",
@@ -697,6 +707,7 @@
       "space b h": "pane::CloseItemsToTheLeft",
       "space b l": "pane::CloseItemsToTheRight",
       "space c d": "editor::GoToDiagnostic",
+      "space c y": "assistant::CopyCode",
       "space t n": "workspace::NewCenterTerminal",
       "escape": "editor::Cancel",
       ":": "command_palette::Toggle",
@@ -707,7 +718,7 @@
       "shift-d": "vim::DeleteToEndOfLine",
       "shift-j": "vim::JoinLines",
       "y": ["vim::PushOperator", "Yank"],
-      "shift-y": "vim::YankToEndOfLine",
+      "shift-y": "vim::YankLine",
       "i": "vim::InsertBefore",
       "shift-i": "vim::InsertFirstNonWhitespace",
       "a": "vim::InsertAfter",
@@ -807,6 +818,7 @@
       "ctrl-[": "vim::NormalBefore",
       "ctrl-x": null,
       "ctrl-space": "editor::ShowCompletions",
+      "ctrl-n": "editor::ShowCompletions",
       "ctrl-x ctrl-a": "assistant::InlineAssist", // zed specific
       "ctrl-x ctrl-c": "editor::ShowInlineCompletion", // zed specific
       // "ctrl-x ctrl-l": "editor::ToggleCodeActions", // zed specific
@@ -887,7 +899,9 @@
     "context": "vim_operator == d",
     "bindings": {
       "d": "vim::CurrentLine",
-      "s": ["vim::PushOperator", "DeleteSurrounds"]
+      "s": ["vim::PushOperator", "DeleteSurrounds"],
+      "o": "editor::ToggleHunkDiff", // "d o"
+      "p": "editor::RevertSelectedHunks" // "d p"
     }
   },
   {
