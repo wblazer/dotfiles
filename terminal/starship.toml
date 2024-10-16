@@ -11,7 +11,7 @@ $time\
 [](fg:bg3)\
 \n[](bold fg:bg0) """
 
-palette = 'rose_pine'
+palette = 'catppuccin'
 
 [palettes.rose_pine]
 fg0 = '#e0def4'
@@ -20,6 +20,14 @@ bg0 = '#9ccfd8'
 bg1 = '#c4a7e7'
 bg2 = '#ebbcba'
 bg3 = '#eb6f92'
+
+[palettes.catppuccin]
+fg0 = '#4c4f69'
+fg1 = '#11111b'
+bg0 = '#cba6f7'
+bg1 = '#b4befe'
+bg2 = '#f5c2e7'
+bg3 = '#f2cdcd'
 
 [palettes.gruvbox]
 fg0 = '#ebdbb2'
@@ -53,4 +61,3 @@ format = "[ $time ]($style)"
 style = "bg:bg3 fg:fg1"
 time_format = "%I:%M%P"
 use_12hr = true
-
