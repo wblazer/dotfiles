@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES_DIR="$HOME/.dotfiles/zed/"
+DOTFILES_DIR="$HOME/.dotfiles/zed"
 CONFIG_DIR="$HOME/.config"
 
 create_symlink() {
