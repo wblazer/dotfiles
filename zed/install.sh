@@ -14,7 +14,7 @@ create_symlink() {
 }
 
 mkdir -p "$CONFIG_DIR/zed"
-create_symlink $DOTFILES_DIR/keymap.json $CONFIG_DIR/zed/
-create_symlink $DOTFILES_DIR/settings.json $CONFIG_DIR/zed/
+create_symlink $DOTFILES_DIR/keymap.json $CONFIG_DIR/zed/keymap.json
+create_symlink $DOTFILES_DIR/settings.json $CONFIG_DIR/zed/settings.json
 
 echo "Zed dotfiles installation complete."
