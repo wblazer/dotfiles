@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES_DIR="$HOME/.dotfiles/zed/"
+DOTFILES_DIR="$HOME/.dotfiles/git"
 CONFIG_DIR="$HOME/.config"
 
 create_symlink() {
@@ -13,8 +13,7 @@ create_symlink() {
   fi
 }
 
-mkdir -p "$CONFIG_DIR/zed"
-create_symlink $DOTFILES_DIR/keymap.json $CONFIG_DIR/zed/
-create_symlink $DOTFILES_DIR/settings.json $CONFIG_DIR/zed/
+ln -s "$DOTFILES_DIR/.gitconfig" "$HOME/"
+cp "$DOTFILES_DIR/.gitignore" "$HOME/"
 
-echo "Zed dotfiles installation complete."
+echo "Git dotfiles installation complete."
