@@ -14,6 +14,7 @@ create_symlink() {
 }
 
 mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 
 chsh -s $(which zsh)
