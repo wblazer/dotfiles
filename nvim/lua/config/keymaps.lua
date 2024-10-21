@@ -3,9 +3,9 @@
 -- Add any additional keymaps here
 
 local function map(mode, lhs, rhs, opts)
-	opts = opts or {}
-	opts.silent = opts.silent ~= false
-	vim.keymap.set(mode, lhs, rhs, opts)
+  opts = opts or {}
+  opts.silent = opts.silent ~= false
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 vim.keymap.del({ "i", "x", "n", "s" }, "<C-s>")
@@ -18,7 +18,7 @@ map({ "n" }, "<C-d>", "<C-d>zz", { desc = "Scroll half page down" })
 
 vim.keymap.del({ "n" }, "<C-k>")
 vim.keymap.del({ "n" }, "<C-j>")
-vim.keymap.del({ "n" }, "C-h")
+vim.keymap.del({ "n" }, "<C-h>")
 vim.keymap.del({ "n" }, "<C-l>")
 map({ "n" }, "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", { remap = true })
 map({ "n" }, "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", { remap = true })
