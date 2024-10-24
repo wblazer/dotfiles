@@ -80,6 +80,8 @@ alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
 alias gst='git status -s -b'
 
+alias c='clear'
+
 # Compression
 compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
 alias decompress="tar -xzf"

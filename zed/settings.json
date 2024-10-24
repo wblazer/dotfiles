@@ -61,7 +61,7 @@
   "cursor_blink": false,
 
   "scrollbar": {
-    "cursors": false
+    "cursors": true
   },
 
   "tab_bar": {
@@ -69,11 +69,11 @@
   },
 
   "toolbar": {
-    "breadcrumbs": false,
+    "breadcrumbs": true,
     "quick_actions": false
   },
 
-  "format_on_save": "on",
+  "format_on_save": "off",
   "formatter": "auto",
 
   "languages": {

@@ -16,8 +16,6 @@
       "enter": "menu::Confirm",
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
       "alt-l": "pane::ActivateNextItem",
       "alt-h": "pane::ActivatePrevItem"
     }
@@ -259,6 +257,7 @@
     "context": "Workspace",
     "bindings": {
       // Change the default action on `menu::Confirm` by setting the parameter
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
       "alt-ctrl-o": ["projects::OpenRecent", { "create_new_window": false }],
       "alt-ctrl-shift-b": "branches::OpenRecent",
       "ctrl-~": "workspace::NewTerminal",
