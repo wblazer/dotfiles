@@ -235,12 +235,6 @@
     }
   },
   {
-    "context": "Editor && mode == full",
-    "bindings": {
-      "ctrl-shift-o": "outline::Toggle"
-    }
-  },
-  {
     "context": "Pane",
     "bindings": {
       "ctrl-w": "pane::CloseActiveItem",
@@ -269,6 +263,7 @@
       "ctrl-s": "workspace::Save",
       "ctrl-shift-s": "workspace::SaveAs",
       "ctrl-t": "workspace::NewFile",
+      "ctrl-shift-o": "workspace::Open",
       // "ctrl-shift-n": "workspace::NewWindow",
       "ctrl-shift-l": "workspace::ToggleRightDock",
       "ctrl-shift-h": "workspace::ToggleLeftDock",
