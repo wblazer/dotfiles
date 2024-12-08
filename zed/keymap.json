@@ -17,7 +17,9 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "alt-l": "pane::ActivateNextItem",
-      "alt-h": "pane::ActivatePrevItem"
+      "alt-h": "pane::ActivatePrevItem",
+      "shift-alt-l": "pane::SwapItemRight",
+      "shift-alt-h": "pane::SwapItemLeft"
     }
   },
   {
@@ -178,7 +180,9 @@
       "alt-enter": "search::SelectAllMatches",
       "ctrl-f": "search::FocusSearch",
       "ctrl-r": "search::ToggleReplace",
-      "ctrl-m": "search::ToggleSelection"
+      "ctrl-m": "search::ToggleSelection",
+      "ctrl-v": "editor::Paste",
+      "ctrl-a": "editor::SelectAll"
     }
   },
   {
@@ -202,7 +206,9 @@
       "ctrl-shift-f": "search::FocusSearch",
       "ctrl-shift-r": "search::ToggleReplace",
       "alt-ctrl-g": "search::ToggleRegex",
-      "alt-ctrl-x": "search::ToggleRegex"
+      "alt-ctrl-x": "search::ToggleRegex",
+      "ctrl-v": "editor::Paste",
+      "ctrl-a": "editor::SelectAll"
     }
   },
   {
@@ -248,9 +254,8 @@
       "alt-c": "search::ToggleCaseSensitive",
       // "alt-w": "search::ToggleWholeWord",
       "alt-r": "search::ToggleRegex",
-      "alt-ctrl-f": "project_search::ToggleFilters",
-      "ctrl-alt-shift-r": "search::ToggleRegex",
-      "ctrl-alt-shift-x": "search::ToggleRegex"
+      "alt-f": "project_search::ToggleFilters",
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"]
     }
   },
   {
@@ -385,6 +390,7 @@
       "escape": "menu::Cancel",
       "left": "outline_panel::CollapseSelectedEntry",
       "h": "outline_panel::CollapseSelectedEntry",
+      "shift-h": "outline_panel::CollapseAllEntries",
       "right": "outline_panel::ExpandSelectedEntry",
       "l": "outline_panel::ExpandSelectedEntry",
       "ctrl-alt-c": "outline_panel::CopyPath",
@@ -432,14 +438,16 @@
       "r": "project_panel::Rename",
       "escape": "project_panel::ToggleFocus",
       "h": "project_panel::CollapseSelectedEntry",
+      "shift-h": "project_panel::CollapseAllEntries",
       "j": "menu::SelectNext",
       "k": "menu::SelectPrev",
-      "l": "project_panel::ExpandSelectedEntry",
+      // "l": "project_panel::ExpandSelectedEntry",
       "delete": "project_panel::Delete",
       "d": ["project_panel::Trash", { "skip_prompt": false }],
       "backspace": ["project_panel::Trash", { "skip_prompt": false }],
       "o": "project_panel::OpenPermanent",
       "enter": "project_panel::OpenPermanent",
+      "l": "project_panel::OpenPermanent",
       "space": "project_panel::Open",
       "s": "project_panel::RevealInFileManager",
       "shift-g": "menu::SelectLast",
@@ -531,6 +539,7 @@
       "space m l": ["workspace::SwapPaneInDirection", "Right"],
       "space m j": ["workspace::SwapPaneInDirection", "Down"],
       "space m k": ["workspace::SwapPaneInDirection", "Up"],
+      "space o": "outline::Toggle",
       "i": ["vim::PushOperator", { "Object": { "around": false } }],
       "a": ["vim::PushOperator", { "Object": { "around": true } }],
       "h": "vim::Left",
@@ -549,9 +558,11 @@
       "right": "vim::Right",
       // "space": "vim::Space",
       "$": "vim::EndOfLine",
+      "shift-l": "vim::EndOfLine",
       "end": "vim::EndOfLine",
       "^": "vim::FirstNonWhitespace",
       "_": "vim::StartOfLineDownward",
+      "shift-h": "vim::StartOfLineDownward",
       "g _": "vim::EndOfLineDownward",
       "(": "vim::SentenceBackward",
       ")": "vim::SentenceForward",
@@ -592,7 +603,6 @@
       ",": "vim::RepeatFindReversed",
       "ctrl-o": "pane::GoBack",
       "ctrl-i": "pane::GoForward",
-      "ctrl-]": "editor::GoToDefinition",
       "escape": ["vim::SwitchMode", "Normal"],
       "ctrl-[": ["vim::SwitchMode", "Normal"],
       "v": "vim::ToggleVisual",
@@ -614,8 +624,6 @@
       // "g" commands
       "g g": "vim::StartOfDocument",
       "g h": "editor::Hover",
-      "g t": "pane::ActivateNextItem",
-      "g shift-t": "pane::ActivatePrevItem",
       "g d": "editor::GoToDefinition",
       "g shift-d": "editor::GoToDeclaration",
       "g y": "editor::GoToTypeDefinition",
@@ -628,10 +636,9 @@
       "g >": ["editor::SelectNext", { "replace_newest": true }],
       "g <": ["editor::SelectPrevious", { "replace_newest": true }],
       "g a": "editor::SelectAllMatches",
-      "g s": "outline::Toggle",
-      "g shift-s": "project_symbols::Toggle",
+      "g s": "project_symbols::Toggle",
       "g .": "editor::ToggleCodeActions", // zed specific
-      "g shift-a": "editor::FindAllReferences", // zed specific
+      "g r": "editor::FindAllReferences", // zed specific
       "g space": "editor::OpenExcerpts", // zed specific
       "g *": ["vim::MoveToNext", { "partialWord": true }],
       "g #": ["vim::MoveToPrev", { "partialWord": true }],
@@ -650,9 +657,7 @@
       "g i": "vim::InsertAtPrevious",
       "g ,": "vim::ChangeListNewer",
       "g ;": "vim::ChangeListOlder",
-      "shift-h": "vim::WindowTop",
       "shift-m": "vim::WindowMiddle",
-      "shift-l": "vim::WindowBottom",
       // z commands
       "z t": "editor::ScrollCursorTop",
       "z z": "editor::ScrollCursorCenter",
@@ -692,7 +697,7 @@
       "space g h": "editor::ToggleHunkDiff",
       "space g e": "editor::ExpandAllHunkDiffs",
       "space g b": "editor::ToggleGitBlame",
-      "space y p": "editor::CopyPath",
+      "space y p": "editor::CopyRelativePath",
       "space g d": "editor::GoToDefinitionSplit",
       "space g t": "editor::GoToTypeDefinitionSplit",
       "space s l": "pane::SplitRight",
@@ -705,9 +710,11 @@
       "space b u": "pane::CloseCleanItems",
       "space b h": "pane::CloseItemsToTheLeft",
       "space b l": "pane::CloseItemsToTheRight",
+      "space b p": "pane::TogglePinTab",
       "space c d": "editor::GoToDiagnostic",
       "space c y": "assistant::CopyCode",
       "space t n": "workspace::NewCenterTerminal",
+      "space r": "pane::RevealInProjectPanel",
       "escape": "editor::Cancel",
       ":": "command_palette::Toggle",
       ".": "vim::Repeat",
@@ -770,8 +777,8 @@
       ":": "vim::VisualCommand",
       "u": "vim::ConvertToLowerCase",
       "U": "vim::ConvertToUpperCase",
-      "o": "vim::OtherEnd",
-      "shift-o": "vim::OtherEnd",
+      "o": ["workspace::SendKeystrokes", "shift-alt-o z z"],
+      "shift-alt-o": "vim::OtherEnd",
       "d": "vim::VisualDelete",
       "x": "vim::VisualDelete",
       "shift-d": "vim::VisualDeleteLine",

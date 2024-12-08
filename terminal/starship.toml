@@ -37,6 +37,14 @@ bg1 = '#8ec07c'
 bg2 = '#83a598'
 bg3 = '#fb4934'
 
+[palettes.gruvbox_material]
+fg0 = '#ebdbb2'
+fg1 = '#282828'
+bg0 = '#a9b665'
+bg1 = '#89b482'
+bg2 = '#7daea3'
+bg3 = '#ea6962'
+
 [username]
 format = "[ $user ]($style)"
 show_always = true
