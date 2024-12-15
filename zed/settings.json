@@ -158,7 +158,7 @@
 
   "languages": {
     "Ruby": {
-      "language_servers": ["solargraph", "!ruby-lsp", "!rubocop", "..."]
+      "language_servers": ["!solargraph", "ruby-lsp", "!rubocop", "..."]
     },
     "ERB": {
       "tab_size": 2

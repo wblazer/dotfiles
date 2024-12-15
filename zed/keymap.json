@@ -738,8 +738,10 @@
       "r": ["vim::PushOperator", "Replace"],
       "s": "vim::Substitute",
       "shift-s": "vim::SubstituteLine",
-      ">": ["vim::PushOperator", "Indent"],
-      "<": ["vim::PushOperator", "Outdent"],
+      // ">": ["vim::PushOperator", "Indent"],
+      // "<": ["vim::PushOperator", "Outdent"],
+      "<": "vim::Outdent",
+      ">": "vim::Indent",
       "g u": ["vim::PushOperator", "Lowercase"],
       "g shift-u": ["vim::PushOperator", "Uppercase"],
       "g ~": ["vim::PushOperator", "OppositeCase"],
@@ -800,8 +802,10 @@
       "ctrl-c": ["vim::SwitchMode", "Normal"],
       "escape": ["vim::SwitchMode", "Normal"],
       "ctrl-[": ["vim::SwitchMode", "Normal"],
-      ">": "vim::Indent",
-      "<": "vim::Outdent",
+      "ctrl-alt->": "vim::Indent",
+      "ctrl-alt-<": "vim::Outdent",
+      ">": ["workspace::SendKeystrokes", "ctrl-alt-> esc g v"],
+      "<": ["workspace::SendKeystrokes", "ctrl-alt-< esc g v"],
       "i": ["vim::PushOperator", { "Object": { "around": false } }],
       "a": ["vim::PushOperator", { "Object": { "around": true } }],
       "g c": "vim::ToggleComments",
@@ -945,12 +949,12 @@
       ">": "vim::CurrentLine"
     }
   },
-  {
-    "context": "vim_operator == <",
-    "bindings": {
-      "<": "vim::CurrentLine"
-    }
-  },
+  // {
+  //   "context": "vim_operator == <",
+  //   "bindings": {
+  //     "<": "vim::CurrentLine"
+  //   }
+  // },
   {
     "context": "vim_operator == gc",
     "bindings": {
@@ -968,7 +972,8 @@
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       ":": "command_palette::Toggle",
-      "space /": "pane::DeploySearch"
+      "space /": "pane::DeploySearch",
+      "space space": "file_finder::Toggle"
     }
   },
   {
