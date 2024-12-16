@@ -14,7 +14,7 @@
   "autosave": "off",
   "ui_font_size": 14,
   "buffer_font_size": 14,
-  "buffer_font_family": "CaskaydiaMono Nerd Font Mono",
+  "buffer_font_family": "CaskaydiaMono Nerd Font",
   "buffer_line_height": { "custom": 1.25 },
 
   "active_pane_modifiers": {
@@ -104,6 +104,27 @@
   //   "ghost_element.background": "#00000000"
   // },
 
+  // Gruvbox Dark Soft Blurred
+  // "experimental.theme_overrides": {
+  //   // "background.appearance": "blurred",
+  //   "background": "#252423E0",
+  //   "editor.background": "#00000000",
+  //   "editor.gutter.background": "#00000000",
+  //   "editor.active_line.background": "#FFFFFF02",
+  //   "editor.document_highlight.bracket_background": "#7DAEA318",
+  //   "tab_bar.background": "#00000000",
+  //   "terminal.background": "#00000000",
+  //   "panel.background": "#00000000",
+  //   "toolbar.background": "#00000000",
+  //   "tab.active_background": "#424A3E80",
+  //   "tab.inactive_background": "#00000000",
+  //   "status_bar.background": "#252423E0",
+  //   "title_bar.background": "#252423E0",
+  //   "title_bar.inactive_background": "#252423E0",
+  //   "border.selected": "#727B5EFF",
+  //   "surface.background": "#25242340"
+  // },
+
   // Gruvbox Light Soft Blurred
   // "experimental.theme_overrides": {
   //   // "background.appearance": "blurred",
@@ -137,7 +158,8 @@
   },
 
   "search": {
-    "regex": false
+    "regex": false,
+    "include_ignored": false
   },
 
   "soft_wrap": "editor_width",
@@ -184,7 +206,10 @@
       "tab_size": 4
     },
     "PHP": {
-      "language_servers": ["intelephense", "!phpactor", "..."]
+      "language_servers": ["intelephense", "!phpactor", "..."],
+      "prettier": {
+        "allowed": false
+      }
     }
   },
 
@@ -202,6 +227,15 @@
     //     }
     //   }
     // },
+    "phpactor": {
+      "phpunit.enabled": true,
+      "language_server.diagnostic_ignore_codes": [
+        "worse.docblock_missing_param",
+        "worse.docblock_missing_return_type",
+        "worse.missing_return_type",
+        "worse.unused_import"
+      ]
+    },
     "tailwindcss-language-server": {
       "settings": {
         "includeLanguages": {

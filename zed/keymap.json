@@ -579,7 +579,7 @@
       "shift-e": ["vim::NextWordEnd", { "ignorePunctuation": true }],
       "shift-b": ["vim::PreviousWordStart", { "ignorePunctuation": true }],
       "g shift-e": ["vim::PreviousWordEnd", { "ignorePunctuation": true }],
-      "/": "vim::Search",
+      "/": ["vim::Search", { "regex": false }],
       "space /": "pane::DeploySearch",
       "?": ["vim::Search", { "backwards": true }],
       "*": "vim::MoveToNext",
@@ -969,7 +969,7 @@
     }
   },
   {
-    "context": "EmptyPane || SharedScreen",
+    "context": "EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Welcome",
     "bindings": {
       ":": "command_palette::Toggle",
       "space /": "pane::DeploySearch",
