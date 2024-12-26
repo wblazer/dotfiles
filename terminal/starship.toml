@@ -11,7 +11,7 @@ $time\
 [](fg:bg3)\
 \n[](bold fg:bg0) """
 
-palette = 'catppuccin'
+palette = 'gruvbox_material'
 
 [palettes.rose_pine]
 fg0 = '#e0def4'

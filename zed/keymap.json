@@ -431,7 +431,6 @@
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
       "r": "project_panel::Rename",
-      "escape": "project_panel::ToggleFocus",
       "h": "project_panel::CollapseSelectedEntry",
       "shift-h": "project_panel::CollapseAllEntries",
       "j": "menu::SelectNext",

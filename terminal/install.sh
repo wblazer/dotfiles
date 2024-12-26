@@ -22,6 +22,7 @@ chsh -s $(which zsh)
 mkdir -p "$CONFIG_DIR/alacritty" "$CONFIG_DIR/tmux"
 
 create_symlink "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+create_symlink "$DOTFILES_DIR/ghostty/config" "$CONFIG_DIR/ghostty/config"
 create_symlink "$DOTFILES_DIR/starship.toml" "$CONFIG_DIR/starship.toml"
 create_symlink "$DOTFILES_DIR/alacritty.toml" "$CONFIG_DIR/alacritty/alacritty.toml"
 create_symlink "$DOTFILES_DIR/tmux.conf" "$CONFIG_DIR/tmux/tmux.conf"

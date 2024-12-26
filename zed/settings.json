@@ -12,9 +12,11 @@
   "relative_line_numbers": true,
   "vertical_scroll_margin": 8,
   "autosave": "off",
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
-  "buffer_font_family": "CaskaydiaMono Nerd Font",
+  "ui_font_size": 13,
+  "ui_font_family": "Roboto Condensed",
+  "buffer_font_size": 13,
+  "buffer_font_weight": 400,
+  "buffer_font_family": "JetBrains Mono",
   "buffer_line_height": { "custom": 1.25 },
 
   "active_pane_modifiers": {
@@ -31,34 +33,36 @@
     "use_multiline_find": true
   },
 
+  "show_signature_help_after_edits": true,
+
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Gruvbox Material"
   },
 
   // Catppuccin Macchiato
-  "experimental.theme_overrides": {
-    "background": "#24273aE0",
-    "editor.background": "#00000000",
-    "editor.gutter.background": "#00000000",
-    "editor.active_line.background": "#FFFFFF02",
-    "editor.document_highlight.bracket_background": "#7DAEA318",
-    "tab_bar.background": "#00000000",
-    "terminal.background": "#00000000",
-    "panel.background": "#00000000",
-    "toolbar.background": "#00000000",
-    "tab.active_background": "#b7bdf818",
-    "tab.inactive_background": "#00000000",
-    "status_bar.background": "#24273aE0",
-    "title_bar.background": "#24273aE0",
-    "title_bar.inactive_background": "#24273aE0",
-    "border.selected": "#a5adcbFF",
-    "scrollbar.track.background": "#00000000",
-    "scrollbar.track.border": "#a5adcb08",
-    "surface.background": "#00000000",
-    "ghost_element.background": "#00000000"
-  },
+  // "experimental.theme_overrides": {
+  //   "background": "#24273aD0",
+  //   "editor.background": "#00000000",
+  //   "editor.gutter.background": "#00000000",
+  //   "editor.active_line.background": "#FFFFFF02",
+  //   "editor.document_highlight.bracket_background": "#7DAEA318",
+  //   "tab_bar.background": "#00000000",
+  //   "terminal.background": "#00000000",
+  //   "panel.background": "#00000000",
+  //   "toolbar.background": "#00000000",
+  //   "tab.active_background": "#b7bdf818",
+  //   "tab.inactive_background": "#00000000",
+  //   "status_bar.background": "#24273aD0",
+  //   "title_bar.background": "#24273aD0",
+  //   "title_bar.inactive_background": "#24273aD0",
+  //   "border.selected": "#a5adcbFF",
+  //   "scrollbar.track.background": "#00000000",
+  //   "scrollbar.track.border": "#a5adcb08",
+  //   "surface.background": "#00000000",
+  //   "ghost_element.background": "#00000000"
+  // },
 
   // Rose Pine Moon
   // "experimental.theme_overrides": {
@@ -83,26 +87,28 @@
   // },
 
   // Gruvbox Material Blurred
-  // "experimental.theme_overrides": {
-  //   // "background.appearance": "blurred",
-  //   "background": "#252423E4",
-  //   "editor.background": "#00000000",
-  //   "editor.gutter.background": "#00000000",
-  //   "editor.active_line.background": "#FFFFFF02",
-  //   "editor.document_highlight.bracket_background": "#7DAEA318",
-  //   "tab_bar.background": "#00000000",
-  //   "terminal.background": "#00000000",
-  //   "panel.background": "#00000000",
-  //   "toolbar.background": "#00000000",
-  //   "tab.active_background": "#424A3E80",
-  //   "tab.inactive_background": "#00000000",
-  //   "status_bar.background": "#252423E0",
-  //   "title_bar.background": "#252423E0",
-  //   "title_bar.inactive_background": "#252423E0",
-  //   "border.selected": "#727B5EFF",
-  //   "surface.background": "#00000000",
-  //   "ghost_element.background": "#00000000"
-  // },
+  "experimental.theme_overrides": {
+    // "background.appearance": "blurred",
+    "background": "#252423E4",
+    "editor.background": "#00000000",
+    "editor.gutter.background": "#00000000",
+    "editor.active_line.background": "#FFFFFF02",
+    "editor.document_highlight.bracket_background": "#7DAEA318",
+    "tab_bar.background": "#00000000",
+    "terminal.background": "#00000000",
+    "panel.background": "#00000000",
+    "toolbar.background": "#00000000",
+    "tab.active_background": "#424A3E80",
+    "tab.inactive_background": "#00000000",
+    "status_bar.background": "#252423E0",
+    "title_bar.background": "#252423E0",
+    "title_bar.inactive_background": "#252423E0",
+    "border.selected": "#727B5EFF",
+    "surface.background": "#00000000",
+    "ghost_element.background": "#00000000",
+    "hint": "#7daea3B0",
+    "hint.background": "#68948a10"
+  },
 
   // Gruvbox Dark Soft Blurred
   // "experimental.theme_overrides": {
@@ -149,9 +155,17 @@
     "right_padding": 0.1
   },
 
+  "file_finder": {
+    "modal_max_width": "large"
+  },
+
+  "extend_comment_on_newline": false,
+
   "current_line_highlight": "all",
   "cursor_blink": false,
+  "auto_signature_help": true,
 
+  "expand_excerpt_lines": 4,
 
   "scrollbar": {
     "cursors": true
@@ -209,7 +223,8 @@
       "language_servers": ["intelephense", "!phpactor", "..."],
       "prettier": {
         "allowed": false
-      }
+      },
+      "remove_trailing_whitespace_on_save": false
     }
   },
 
@@ -254,6 +269,28 @@
         }
       }
     }
+  },
+
+  "show_user_picture": false,
+
+  "inlay_hints": {
+    // Global switch to toggle hints on and off, switched off by default.
+    "enabled": true,
+    // Toggle certain types of hints on and off, all switched on by default.
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    // Corresponds to null/None LSP hint type value.
+    "show_other_hints": true,
+    // Whether to show a background for inlay hints.
+    //
+    // If set to `true`, the background will use the `hint.background` color from the current theme.
+    "show_background": true,
+    // Time to wait after editing the buffer, before requesting the hints,
+    // set to 0 to disable debouncing.
+    "edit_debounce_ms": 700,
+    // Time to wait after scrolling the buffer, before requesting the hints,
+    // set to 0 to disable debouncing.
+    "scroll_debounce_ms": 50
   },
 
   "git": {
