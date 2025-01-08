@@ -167,7 +167,12 @@
     "bindings": {
       "ctrl-t": "prompt_library::NewPrompt",
       "ctrl-n": "prompt_library::NewPrompt",
-      "ctrl-shift-s": "prompt_library::ToggleDefaultPrompt"
+      "ctrl-shift-s": "prompt_library::ToggleDefaultPrompt",
+      "ctrl-v": "editor::Paste",
+      "ctrl-a": "editor::SelectAll",
+      "ctrl-c": "editor::Copy",
+      "ctrl-z": "editor::Undo",
+      "ctrl-x": "editor::Cut"
     }
   },
   {

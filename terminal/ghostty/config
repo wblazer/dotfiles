@@ -1,5 +1,5 @@
 font-size = 10
-theme = gruvbox-material
+config-file = /home/wblazer/.dotfiles/themes/ghostty/config
 background-opacity = 0.9
 window-padding-x = 14
 window-padding-y = 12
@@ -7,12 +7,14 @@ window-padding-balance = true
 window-decoration = false
 window-theme = ghostty
 
+mouse-scroll-multiplier = 2
 window-inherit-working-directory = true
 window-new-tab-position = end
 copy-on-select = false
 confirm-close-surface = false
 quit-after-last-window-closed = false
 gtk-wide-tabs = false
+clipboard-paste-protection = false
 
 keybind = ctrl+t=new_tab
 keybind = alt+h=previous_tab
@@ -27,10 +29,11 @@ keybind = ctrl+space>s>j=new_split:down
 keybind = ctrl+space>s>h=new_split:left
 keybind = ctrl+space>s>k=new_split:up
 keybind = ctrl+space>s>e=equalize_splits
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+l=goto_split:right
+keybind = unconsumed:ctrl+h=goto_split:left
+keybind = unconsumed:ctrl+l=goto_split:right
 keybind = ctrl+space>ctrl+space=toggle_split_zoom
-keybind = ctrl+shift+h=resize_split:left,5
-keybind = ctrl+shift+l=resize_split:right,5
-keybind = ctrl+shift+k=resize_split:up,5
-keybind = ctrl+shift+j=resize_split:down,5
+keybind = ctrl+shift+h=resize_split:left,10
+keybind = ctrl+shift+l=resize_split:right,10
+keybind = ctrl+shift+k=resize_split:up,10
+keybind = ctrl+shift+j=resize_split:down,10
+keybind = ctrl+shift+f=write_scrollback_file:paste
