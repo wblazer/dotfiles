@@ -1,0 +1,25 @@
+{
+  "experimental.theme_overrides": {
+    "background": "#252423E4",
+    "editor.background": "#00000000",
+    "editor.gutter.background": "#00000000",
+    "editor.active_line.background": "#FFFFFF02",
+    "editor.document_highlight.bracket_background": "#7DAEA318",
+    "tab_bar.background": "#00000000",
+    "terminal.background": "#00000000",
+    "panel.background": "#00000000",
+    "toolbar.background": "#00000000",
+    "tab.active_background": "#424A3E80",
+    "tab.inactive_background": "#00000000",
+    "status_bar.background": "#252423E0",
+    "title_bar.background": "#252423E0",
+    "title_bar.inactive_background": "#252423E0",
+    "border.selected": "#727B5EFF",
+    "surface.background": "#00000000",
+    "scrollbar.track.background": "#00000000",
+    "scrollbar.track.border": "#a5adcb08",
+    "ghost_element.background": "#00000000",
+    "hint": "#7daea3B0",
+    "hint.background": "#68948a10"
+  }
+}
