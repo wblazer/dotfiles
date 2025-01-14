@@ -1,4 +1,3 @@
-
 format = """
 [](fg:bg0)\
 $username\
@@ -11,7 +10,7 @@ $time\
 [](fg:bg3)\
 \n[](bold fg:bg0) """
 
-palette = 'gruvbox_material'
+palette = 'catppuccin_macchiato'
 
 [palettes.rose_pine]
 fg0 = '#e0def4'
@@ -21,7 +20,7 @@ bg1 = '#c4a7e7'
 bg2 = '#ebbcba'
 bg3 = '#eb6f92'
 
-[palettes.catppuccin]
+[palettes.catppuccin_macchiato]
 fg0 = '#4c4f69'
 fg1 = '#11111b'
 bg0 = '#cba6f7'

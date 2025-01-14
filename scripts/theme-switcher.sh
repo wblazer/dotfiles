@@ -28,4 +28,7 @@ if [ -n "$THEME" ]; then
 
   # move temp file back
   mv "$tmp" "$DOTFILES/zed/settings.json"
+
+  STARSHIP_THEME=$(echo "$THEME_PROPER" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
+  sed -i "s/^palette = .*/palette = '$STARSHIP_THEME'/" "$DOTFILES/terminal/starship.toml"
 fi
