@@ -528,6 +528,7 @@
     "context": "VimControl && !menu",
     "bindings": {
       "space space": "file_finder::Toggle",
+      "space t": "task::Spawn",
       "space n d": "workspace::ClearAllNotifications",
       "space n o": "notification_panel::ToggleFocus",
       "space w w": "workspace::ActivateNextPane",
@@ -714,7 +715,7 @@
       "space b p": "pane::TogglePinTab",
       "space c d": "editor::GoToDiagnostic",
       "space c y": "assistant::CopyCode",
-      "space t n": "workspace::NewCenterTerminal",
+      // "space t n": "workspace::NewCenterTerminal",
       "space r": "pane::RevealInProjectPanel",
       "escape": "editor::Cancel",
       ":": "command_palette::Toggle",
