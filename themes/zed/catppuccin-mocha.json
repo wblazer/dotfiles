@@ -1,25 +1,25 @@
 {
   "experimental.theme_overrides": {
-    "background": "#24273aD0",
+    "background": "#1e1e2eD0",
     "editor.background": "#00000000",
     "editor.gutter.background": "#00000000",
     "editor.active_line.background": "#FFFFFF02",
-    "editor.document_highlight.bracket_background": "#7DAEA318",
+    "editor.document_highlight.bracket_background": "#9399b218",
     "tab_bar.background": "#00000000",
     "terminal.background": "#00000000",
     "panel.background": "#00000000",
     "toolbar.background": "#00000000",
-    "tab.active_background": "#b7bdf818",
+    "tab.active_background": "#b4befe18",
     "tab.inactive_background": "#00000000",
-    "status_bar.background": "#24273aD0",
-    "title_bar.background": "#24273aD0",
-    "title_bar.inactive_background": "#24273aD0",
-    "border.selected": "#a5adcbFF",
+    "status_bar.background": "#1e1e2eD0",
+    "title_bar.background": "#1e1e2eD0",
+    "title_bar.inactive_background": "#1e1e2eD0",
+    "border.selected": "#b4befeb0",
     "surface.background": "#00000000",
     "scrollbar.track.background": "#00000000",
-    "scrollbar.track.border": "#a5adcb08",
+    "scrollbar.track.border": "#b4befe10",
     "ghost_element.background": "#00000000",
-    "hint": "#7daea3B0",
-    "hint.background": "#68948a10"
+    "hint": "#11111b80",
+    "hint.background": "#1e1e2e00"
   }
 }

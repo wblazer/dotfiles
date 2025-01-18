@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THEMES=("Gruvbox Material" "Catppuccin Macchiato")
+THEMES=("Gruvbox Material" "Catppuccin Mocha")
 THEME_PROPER=$(gum choose "${THEMES[@]}" --header "pick theme")
 THEME=$(echo "$THEME_PROPER" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 DOTFILES="$HOME/.dotfiles"
