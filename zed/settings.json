@@ -5,10 +5,10 @@
   "vertical_scroll_margin": 8,
   "autosave": "off",
   "ui_font_size": 13,
-  "ui_font_family": "Roboto Condensed",
+  "ui_font_family": "ZedMono Nerd Font",
   "buffer_font_size": 13,
   "buffer_font_weight": 400,
-  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_family": "CaskaydiaMono Nerd Font",
   "buffer_line_height": {
     "custom": 1.25
   },
