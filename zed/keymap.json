@@ -528,7 +528,6 @@
     "context": "VimControl && !menu",
     "bindings": {
       "space space": "file_finder::Toggle",
-      "space t": "task::Spawn",
       "space n d": "workspace::ClearAllNotifications",
       "space n o": "notification_panel::ToggleFocus",
       "space w w": "workspace::ActivateNextPane",
@@ -683,6 +682,12 @@
       // "ctrl-w space": "editor::OpenExcerptsSplit",
       // "ctrl-w g space": "editor::OpenExcerptsSplit",
       "ctrl-6": "pane::AlternateFile"
+    }
+  },
+  {
+    "context": "VimControl && !menu && !(ContextEditor > Editor)",
+    "bindings": {
+      "space t": "task::Spawn"
     }
   },
   {
