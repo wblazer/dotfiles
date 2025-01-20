@@ -1,8 +1,12 @@
 #!/bin/bash
 
-THEMES=("Gruvbox Material" "Catppuccin Mocha")
+THEMES=("Gruvbox Material" "Catppuccin Mocha" "Rose Pine Moon")
 THEME_PROPER=$(gum choose "${THEMES[@]}" --header "pick theme")
 THEME=$(echo "$THEME_PROPER" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+ZED_THEME="$THEME_PROPER"  # keeps accent for zed
+if [ "$THEME" = "rose-pine-moon" ]; then
+    THEME="rose-pine-moon"  # force unaccented for files
+fi
 DOTFILES="$HOME/.dotfiles"
 
 if [ -n "$THEME" ]; then
@@ -14,16 +18,16 @@ if [ -n "$THEME" ]; then
   tmp=$(mktemp)
 
   # set theme
-  jq --arg theme "$THEME_PROPER" '.theme.dark = $theme' "$DOTFILES/zed/settings.json" > "$tmp"
+  jq --arg theme "$ZED_THEME" '.theme.dark = $theme' "$DOTFILES/zed/settings.json" >"$tmp"
 
   # apply overrides if they exist
   OVERRIDE_PATH="$DOTFILES/themes/zed/$THEME.json"
   if [ -f "$OVERRIDE_PATH" ]; then
     overrides=$(jq -r '.["experimental.theme_overrides"]' "$OVERRIDE_PATH")
-    jq --argjson overrides "$overrides" '.["experimental.theme_overrides"] = $overrides' "$tmp" > "$tmp.2" && mv "$tmp.2" "$tmp"
+    jq --argjson overrides "$overrides" '.["experimental.theme_overrides"] = $overrides' "$tmp" >"$tmp.2" && mv "$tmp.2" "$tmp"
   else
     echo "no zed theme overrides found"
-    jq 'del(.["experimental.theme_overrides"])' "$tmp" > "$tmp.2" && mv "$tmp.2" "$tmp"
+    jq 'del(.["experimental.theme_overrides"])' "$tmp" >"$tmp.2" && mv "$tmp.2" "$tmp"
   fi
 
   # move temp file back

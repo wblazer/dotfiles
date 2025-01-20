@@ -424,6 +424,12 @@
     }
   },
   {
+    "context": "ProjectPanel && editing",
+    "bindings": {
+      "ctrl-v": "editor::Paste"
+    }
+  },
+  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       ":": "command_palette::Toggle",

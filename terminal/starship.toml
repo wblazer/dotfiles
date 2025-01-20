@@ -10,9 +10,9 @@ $time\
 [](fg:bg3)\
 \n[](bold fg:bg0) """
 
-palette = 'catppuccin_mocha'
+palette = 'rose_pine_moon'
 
-[palettes.rose_pine]
+[palettes.rose_pine_moon]
 fg0 = '#e0def4'
 fg1 = '#191724'
 bg0 = '#9ccfd8'

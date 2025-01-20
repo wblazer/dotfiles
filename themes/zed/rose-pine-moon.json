@@ -1,21 +1,25 @@
 {
   "experimental.theme_overrides": {
-    "background": "#191724EC",
+    "background": "#191724d0",
     "editor.background": "#00000000",
     "editor.gutter.background": "#00000000",
+    "editor.active_line.background": "#21202e",
+    "editor.document_highlight.bracket_background": "#403d52",
     "tab_bar.background": "#00000000",
     "terminal.background": "#00000000",
     "panel.background": "#00000000",
     "toolbar.background": "#00000000",
-    "tab.active_background": "#c4a7e710",
+    "tab.active_background": "#c4a7e718",
     "tab.inactive_background": "#00000000",
-    "status_bar.background": "#191724E8",
-    "title_bar.background": "#191724E8",
-    "title_bar.inactive_background": "#191724E8",
-    "scrollbar.track.background": "#00000000",
-    "scrollbar.track.border": "#524f67E0",
-    "editor.active_line.background": "#524f6718",
+    "status_bar.background": "#191724d0",
+    "title_bar.background": "#191724d0",
+    "title_bar.inactive_background": "#191724d0",
+    "border.selected": "#e0def4b0",
     "surface.background": "#00000000",
-    "ghost_element.background": "#00000000"
+    "scrollbar.track.background": "#00000000",
+    "scrollbar.track.border": "#e0def410",
+    "ghost_element.background": "#00000000",
+    "hint": "#6e6a86b0",
+    "hint.background": "#19172400"
   }
 }

@@ -1,6 +1,6 @@
 {
   "experimental.theme_overrides": {
-    "background": "#1e1e2eD0",
+    "background": "#1e1e2eE0",
     "editor.background": "#00000000",
     "editor.gutter.background": "#00000000",
     "editor.active_line.background": "#FFFFFF02",
