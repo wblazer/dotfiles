@@ -23,6 +23,12 @@
     }
   },
   {
+    "context": "Editor && !VimControl",
+    "bindings":{
+      "ctrl-v": "editor::Paste"
+    }
+  },
+  {
     "context": "VimControl || Dock",
     "bindings": {}
   },
@@ -119,8 +125,6 @@
       "shift-enter": "editor::Newline",
       "ctrl-enter": "editor::NewlineAbove",
       "ctrl-shift-enter": "editor::NewlineBelow",
-      "ctrl-f": "buffer_search::Deploy",
-      // "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }],
       "ctrl->": "assistant::QuoteSelection",
       "ctrl-<": "assistant::InsertIntoEditor"
     }
@@ -128,9 +132,10 @@
   {
     "context": "Editor && mode == full && inline_completion",
     "bindings": {
-      "ctrl-n": "editor::NextInlineCompletion",
-      "ctrl-p": "editor::PreviousInlineCompletion",
-      "ctrl-y": "editor::AcceptPartialInlineCompletion"
+      "alt-j": "editor::NextInlineCompletion",
+      "alt-k": "editor::PreviousInlineCompletion",
+      "alt-'": "editor::AcceptPartialInlineCompletion",
+      "alt-;": "editor::AcceptInlineCompletion"
     }
   },
   {
@@ -183,11 +188,16 @@
       "enter": "search::SelectNextMatch",
       "shift-enter": "search::SelectPrevMatch",
       "alt-enter": "search::SelectAllMatches",
-      "ctrl-f": "search::FocusSearch",
       "ctrl-r": "search::ToggleReplace",
       "ctrl-m": "search::ToggleSelection",
       "ctrl-v": "editor::Paste",
       "ctrl-a": "editor::SelectAll"
+    }
+  },
+  {
+    "context": "BufferSearchBar && vim_mode == normal",
+    "bindings": {
+      "ctrl-f": "search::FocusSearch"
     }
   },
   {

@@ -1,3 +1,8 @@
+if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
+      "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select-wrapped" ]]; then
+    zle -N zle-keymap-select "";
+fi
+
 eval "$(starship init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 
@@ -23,7 +28,10 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
 # Keybindings
-bindkey -e
+KEYTIMEOUT=1
+bindkey -v
+
+bindkey -M viins '\e;' autosuggest-accept
 
 # History
 HISTSIZE=32768

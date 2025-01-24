@@ -1,11 +1,12 @@
 {
+  "show_inline_completions": false,
   "vim_mode": true,
   "base_keymap": "None",
   "relative_line_numbers": true,
   "vertical_scroll_margin": 8,
   "autosave": "off",
   "ui_font_size": 13,
-  "ui_font_family": "ZedMono Nerd Font",
+  "ui_font_family": "ZedMono Nerd Font Mono",
   "buffer_font_size": 13,
   "buffer_font_weight": 400,
   "buffer_font_family": "CaskaydiaMono Nerd Font",
@@ -27,7 +28,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rose Pine Moon"
+    "dark": "Rosé Pine Moon"
   },
   "centered_layout": {
     "left_padding": 0.1,
@@ -151,10 +152,10 @@
   },
   "show_user_picture": false,
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_type_hints": true,
-    "show_parameter_hints": true,
-    "show_other_hints": true,
+    "show_parameter_hints": false,
+    "show_other_hints": false,
     "show_background": true,
     "edit_debounce_ms": 700,
     "scroll_debounce_ms": 50
@@ -188,15 +189,40 @@
       "model": "claude-3-5-sonnet-latest"
     }
   },
-  "features": {
-    "inline_completion_provider": "none"
+  "language_models": {
+    "openai": {
+      "api_url": "https://api.deepseek.com/v1",
+      "version": "1",
+      "available_models": [
+        {
+          "name": "deepseek-reasoner",
+          "max_tokens": 64000
+        },
+        {
+          "name": "deepseek-chat",
+          "max_tokens": 64000
+        }
+      ]
+    }
   },
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
+  "inline_completions": {
+    "disabled_globs": [
+      ".env"
+    ]
+  },
+  "inline_completions_disabled_in": [
+    "comment",
+    "string"
+  ],
   "outline_panel": {
     "default_width": 300,
     "indent_size": 15
   },
   "experimental.theme_overrides": {
-    "background": "#191724d0",
+    "background": "#191724e8",
     "editor.background": "#00000000",
     "editor.gutter.background": "#00000000",
     "editor.active_line.background": "#21202e",
@@ -207,9 +233,9 @@
     "toolbar.background": "#00000000",
     "tab.active_background": "#c4a7e718",
     "tab.inactive_background": "#00000000",
-    "status_bar.background": "#191724d0",
-    "title_bar.background": "#191724d0",
-    "title_bar.inactive_background": "#191724d0",
+    "status_bar.background": "#191724e8",
+    "title_bar.background": "#191724e8",
+    "title_bar.inactive_background": "#191724e8",
     "border.selected": "#e0def4b0",
     "surface.background": "#00000000",
     "scrollbar.track.background": "#00000000",
