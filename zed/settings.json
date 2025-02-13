@@ -226,7 +226,7 @@
     "scrollbar.track.background": "#00000000",
     "scrollbar.track.border": "#b4befe10",
     "ghost_element.background": "#00000000",
-    // "hint": "#cdd6f420",
-    // "hint.background": "#1e1e2e00"
+    "hint": "#cdd6f420",
+    "hint.background": "#1e1e2e00"
   }
 }
