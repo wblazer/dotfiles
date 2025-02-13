@@ -3,6 +3,7 @@
 THEMES=("Gruvbox Material" "Catppuccin Mocha" "Rose Pine Moon")
 THEME_PROPER=$(gum choose "${THEMES[@]}" --header "pick theme")
 THEME=$(echo "$THEME_PROPER" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+ZED_THEME="$THEME_PROPER"  # default case
 if [ "$THEME_PROPER" = "Rose Pine Moon" ]; then
     ZED_THEME="Rosé Pine Moon"  # force unaccented for files
 fi
