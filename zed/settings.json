@@ -206,6 +206,9 @@
     "default_width": 300,
     "indent_size": 15
   },
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
   "experimental.theme_overrides": {
     "background": "#191724e0",
     "editor.background": "#00000000",
