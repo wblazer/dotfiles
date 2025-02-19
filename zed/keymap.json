@@ -136,16 +136,21 @@
   {
     "context": "Editor && mode == full && edit_prediction",
     "bindings": {
-      "alt-j": "editor::NextEditPrediction",
-      "alt-k": "editor::PreviousEditPrediction",
-      "alt-'": "editor::AcceptPartialEditPrediction",
+      "alt-n": "editor::NextEditPrediction",
+      "alt-shift-n": "editor::PreviousEditPrediction",
+      "alt-'": "editor::AcceptPartialEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
       "alt-;": "editor::AcceptEditPrediction"
     }
   },
   {
-    "context": "Editor && !edit_prediction",
+  "context": "Editor && edit_prediction_conflict",
     "bindings": {
-      // "ctrl-;": "editor::ShowInlineCompletion"
+      "alt-;": "editor::AcceptEditPrediction"
     }
   },
   {
@@ -168,13 +173,13 @@
       "alt-b": "assistant::DeployHistory",
       "alt-m": "assistant::ToggleModelSelector",
       "alt-p": "assistant::DeployPromptLibrary",
-      "ctrl-t": "assistant::NewContext"
+      "alt-k": "assistant::NewContext"
     }
   },
   {
     "context": "PromptLibrary",
     "bindings": {
-      "ctrl-t": "prompt_library::NewPrompt",
+      "alt-k": "prompt_library::NewPrompt",
       "ctrl-n": "prompt_library::NewPrompt",
       "ctrl-shift-s": "prompt_library::ToggleDefaultPrompt",
       "ctrl-v": "editor::Paste",
@@ -257,9 +262,8 @@
   {
     "context": "Pane",
     "bindings": {
-      "ctrl-w": "pane::CloseActiveItem",
-      "alt-w": "pane::CloseActiveItem",
-      "ctrl-shift-t": "pane::ReopenClosedItem",
+      "alt-j": "pane::CloseActiveItem",
+      "alt-shift-k": "pane::ReopenClosedItem",
       "ctrl-shift-f": "project_search::ToggleFocus",
       "ctrl-alt-g": "search::SelectNextMatch",
       "ctrl-alt-shift-g": "search::SelectPrevMatch",
@@ -282,7 +286,7 @@
       "ctrl-~": "workspace::NewTerminal",
       "ctrl-s": "workspace::Save",
       "ctrl-shift-s": "workspace::SaveAs",
-      "ctrl-t": "workspace::NewFile",
+      "alt-k": "workspace::NewFile",
       "ctrl-shift-o": "workspace::Open",
       // "ctrl-shift-n": "workspace::NewWindow",
       "ctrl-alt-l": "workspace::ToggleRightDock",
@@ -517,7 +521,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-t": "workspace::NewTerminal",
+      "alt-k": "workspace::NewTerminal",
       "ctrl-alt-space": "terminal::ShowCharacterPalette",
       "ctrl-shift-c": "terminal::Copy",
       "ctrl-insert": "terminal::Copy",

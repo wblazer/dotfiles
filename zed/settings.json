@@ -7,10 +7,10 @@
   "vertical_scroll_margin": 8,
   "autosave": "off",
   "ui_font_size": 14,
-  "ui_font_family": "IosevkaTerm Nerd Font Mono",
+  "ui_font_family": "Iosevka Nerd Font",
   "buffer_font_size": 14.0,
   "buffer_font_weight": 400,
-  "buffer_font_family": "IosevkaTerm Nerd Font Mono",
+  "buffer_font_family": "Iosevka Nerd Font",
   "buffer_line_height": {
     "custom": 1.25
   },
@@ -29,7 +29,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine Moon"
+    "dark": "Gruvbox Material"
   },
   "centered_layout": {
     "left_padding": 0.1,
@@ -190,6 +190,19 @@
       "model": "claude-3-5-sonnet-latest"
     }
   },
+  // "language_models": {
+  //   "openai": {
+  //     "api_url": "https://api.x.ai/v1",
+  //     "available_models": [
+  //       {
+  //         "name": "grok-3-latest",
+  //         "display_name": "Grok 2",
+  //         "max_tokens": 131072
+  //       }
+  //     ],
+  //     "version": "1"
+  //   }
+  // },
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -210,26 +223,26 @@
     "coloring": "indent_aware"
   },
   "experimental.theme_overrides": {
-    "background": "#191724e0",
+    "background": "#252423E4",
     "editor.background": "#00000000",
     "editor.gutter.background": "#00000000",
-    "editor.active_line.background": "#21202e",
-    "editor.document_highlight.bracket_background": "#403d52",
+    "editor.active_line.background": "#FFFFFF02",
+    "editor.document_highlight.bracket_background": "#7DAEA318",
     "tab_bar.background": "#00000000",
     "terminal.background": "#00000000",
     "panel.background": "#00000000",
     "toolbar.background": "#00000000",
-    "tab.active_background": "#c4a7e718",
+    "tab.active_background": "#424A3E80",
     "tab.inactive_background": "#00000000",
-    "status_bar.background": "#191724d0",
-    "title_bar.background": "#191724d0",
-    "title_bar.inactive_background": "#191724d0",
-    "border.selected": "#e0def4b0",
+    "status_bar.background": "#252423E0",
+    "title_bar.background": "#252423E0",
+    "title_bar.inactive_background": "#252423E0",
+    "border.selected": "#727B5EFF",
     "surface.background": "#00000000",
     "scrollbar.track.background": "#00000000",
-    "scrollbar.track.border": "#e0def410",
+    "scrollbar.track.border": "#a5adcb08",
     "ghost_element.background": "#00000000",
-    "hint": "#6e6a86b0",
-    "hint.background": "#10172440"
+    "hint": "#7daea3B0",
+    "hint.background": "#68948a10"
   }
 }

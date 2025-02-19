@@ -17,12 +17,12 @@ quit-after-last-window-closed = false
 gtk-wide-tabs = false
 clipboard-paste-protection = false
 
-keybind = ctrl+t=new_tab
+keybind = alt+k=new_tab
 keybind = alt+h=previous_tab
 keybind = alt+l=next_tab
 keybind = alt+shift+h=move_tab:-1
 keybind = alt+shift+l=move_tab:+1
-keybind = alt+w=close_surface
+keybind = alt+j=close_surface
 keybind = ctrl+space>r=reload_config
 keybind = ctrl+space>t=toggle_quick_terminal
 keybind = ctrl+space>s>l=new_split:right
