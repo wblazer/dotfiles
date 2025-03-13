@@ -1,70 +1,64 @@
+# Minimal Starship config with colored text
+
 format = """
-[](fg:bg0)\
 $username\
-[](fg:bg0 bg:bg1)\
-$directory\
-[](fg:bg1 bg:bg2)\
-$git_branch\
-[](fg:bg2 bg:bg3)\
-$time\
-[](fg:bg3)\
-\n[](bold fg:bg0) """
+[|](dimmed) $directory\
+[|](dimmed) $git_branch\
+[|](dimmed) $time
+$character
+"""
 
-palette = 'rose_pine_moon'
+palette = 'gruvbox-material'
 
-[palettes.rose_pine_moon]
-fg0 = '#e0def4'
-fg1 = '#191724'
-bg0 = '#9ccfd8'
-bg1 = '#c4a7e7'
-bg2 = '#ebbcba'
-bg3 = '#eb6f92'
+[palettes.rose-pine-moon]
+text0 = '#9ccfd8'
+text1 = '#c4a7e7'
+text2 = '#ebbcba'
+text3 = '#eb6f92'
 
-[palettes.catppuccin_mocha]
-fg0 = '#4c4f69'
-fg1 = '#11111b'
-bg0 = '#cba6f7'
-bg1 = '#b4befe'
-bg2 = '#f5c2e7'
-bg3 = '#f2cdcd'
+[palettes.catppuccin-mocha]
+text0 = '#cba6f7'
+text1 = '#b4befe'
+text2 = '#f5c2e7'
+text3 = '#f2cdcd'
 
-[palettes.gruvbox]
-fg0 = '#ebdbb2'
-fg1 = '#282828'
-bg0 = '#b8bb26'
-bg1 = '#8ec07c'
-bg2 = '#83a598'
-bg3 = '#fb4934'
+[palettes.gruvbox-light]
+text0 = '#79740e'
+text1 = '#427b58'
+text2 = '#076678'
+text3 = '#9d0006'
 
-[palettes.gruvbox_material]
-fg0 = '#ebdbb2'
-fg1 = '#282828'
-bg0 = '#a9b665'
-bg1 = '#89b482'
-bg2 = '#7daea3'
-bg3 = '#ea6962'
+[palettes.gruvbox-material]
+text0 = '#a9b665'
+text1 = '#89b482'
+text2 = '#7daea3'
+text3 = '#ea6962'
 
 [username]
-format = "[ $user ]($style)"
+format = "[$user]($style) "
 show_always = true
-style_root = "bg:bg0 fg:fg1"
-style_user = "bg:bg0 fg:fg1"
+style_user = "fg:text0 bold"
+style_root = "fg:text3 bold"
 
 [directory]
-format = "[ $path ]($style)"
-style = "bg:bg1 fg:fg1"
+format = "[$path]($style) "
+style = "fg:text1"
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = false
 
 [git_branch]
-format = "[ $symbol $branch ]($style)"
-style = "bg:bg2 fg:fg1"
-symbol = ""
+format = "[$symbol$branch]($style) "
+style = "fg:text2"
+symbol = " "
 
 [time]
 disabled = false
-format = "[ $time ]($style)"
-style = "bg:bg3 fg:fg1"
+format = "[$time]($style)"
+style = "fg:text3"
 time_format = "%I:%M%P"
-use_12hr = true
+
+[character]
+success_symbol = "[](fg:text0 bold) "
+error_symbol = "[](fg:text0 bold) "
+vimcmd_symbol = "[󰇘](fg:text0 bold) "

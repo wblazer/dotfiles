@@ -8,9 +8,9 @@
   "autosave": "off",
   "ui_font_size": 14,
   "ui_font_family": "Iosevka Nerd Font",
-  "buffer_font_size": 14.0,
+  "buffer_font_size": 15.0,
   "buffer_font_weight": 400,
-  "buffer_font_family": "Iosevka Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_line_height": {
     "custom": 1.25
   },
@@ -27,9 +27,9 @@
   },
   "show_signature_help_after_edits": true,
   "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Rosé Pine Moon"
+    "mode": "dark",
+    "dark": "Gruvbox Material",
+    "light": "Gruvbox Light"
   },
   "centered_layout": {
     "left_padding": 0.1,
@@ -97,6 +97,7 @@
       "tab_size": 4
     },
     "PHP": {
+      "show_edit_predictions": true,
       "language_servers": [
         "intelephense",
         "!phpactor",
@@ -184,19 +185,20 @@
     "default_width": 300,
     "indent_size": 15,
     "auto_fold_dirs": true,
-    "auto_reveal_entries": false
+    "auto_reveal_entries": true
   },
   "assistant": {
     "version": "2",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     }
   },
   "features": {
     "edit_prediction_provider": "zed"
   },
   "edit_predictions": {
+    "enabled_in_assistant": false,
     "disabled_globs": [
       ".env"
     ]
@@ -211,28 +213,5 @@
   },
   "indent_guides": {
     "coloring": "indent_aware"
-  },
-  "experimental.theme_overrides": {
-    "background": "#191724d0",
-    "editor.background": "#00000000",
-    "editor.gutter.background": "#00000000",
-    "editor.active_line.background": "#21202e",
-    "editor.document_highlight.bracket_background": "#403d52",
-    "tab_bar.background": "#00000000",
-    "terminal.background": "#00000000",
-    "panel.background": "#00000000",
-    "toolbar.background": "#00000000",
-    "tab.active_background": "#c4a7e718",
-    "tab.inactive_background": "#00000000",
-    "status_bar.background": "#191724d0",
-    "title_bar.background": "#191724d0",
-    "title_bar.inactive_background": "#191724d0",
-    "border.selected": "#e0def4b0",
-    "surface.background": "#00000000",
-    "scrollbar.track.background": "#00000000",
-    "scrollbar.track.border": "#e0def410",
-    "ghost_element.background": "#00000000",
-    "hint": "#6e6a86b0",
-    "hint.background": "#19172400"
   }
 }

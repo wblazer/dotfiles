@@ -1,8 +1,10 @@
+local theme_config = require("config.theme")
+
 return {
   {
     "catppuccin/nvim",
     lazy = false,
-    name = "catppuccin",
+    name = "catppuccin-mocha",
     opts = {
       flavour = "mocha",
     },
@@ -16,8 +18,18 @@ return {
     opts = {},
   },
   {
+    "ellisonleao/gruvbox.nvim",
+    lazy = false,
+    priority = 1000,
+    config = true,
+    name = "gruvbox-light",
+    opts = {
+      background = "light",
+    },
+  },
+  {
     "rose-pine/neovim",
-    name = "rose-pine",
+    name = "rose-pine-moon",
     opts = {
       variant = "moon",
     },
@@ -25,7 +37,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = theme_config.name,
     },
   },
 }

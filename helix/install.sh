@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DOTFILES_DIR="$HOME/dotfiles/zed"
-CONFIG_DIR="$HOME/.config"
+DOTFILES_DIR="$HOME/dotfiles/helix"
+CONFIG_DIR="$HOME/.config/helix"
 
 create_symlink() {
   local src="$1"
@@ -19,9 +19,8 @@ create_symlink() {
   fi
 }
 
-mkdir -p "$CONFIG_DIR/zed"
-create_symlink "$DOTFILES_DIR/keymap.json" "$CONFIG_DIR/zed/keymap.json"
-create_symlink "$DOTFILES_DIR/settings.json" "$CONFIG_DIR/zed/settings.json"
-create_symlink "$DOTFILES_DIR/tasks.json" "$CONFIG_DIR/zed/tasks.json"
+mkdir -p "$CONFIG_DIR"
 
-echo "Zed dotfiles installation complete."
+create_symlink "$DOTFILES_DIR/config.toml" "$CONFIG_DIR/config.toml"
+
+echo "Helix dotfiles installation complete."

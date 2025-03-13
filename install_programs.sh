@@ -17,9 +17,6 @@ sudo apt-get install -y ./gum.deb
 rm gum.deb
 cd -
 
-sudo apt install -y alacritty
-mkdir -p ~/.config/alacritty
-
 # Zed
 curl -f https://zed.dev/install.sh | sh
 

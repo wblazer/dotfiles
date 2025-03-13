@@ -2,12 +2,14 @@
 
 set -e
 
-DOTFILES_DIR="$HOME/.dotfiles"
+DOTFILES_DIR="$HOME/dotfiles"
 
 # Run individual install scripts
 bash "$DOTFILES_DIR/terminal/install.sh"
 bash "$DOTFILES_DIR/zed/install.sh"
 bash "$DOTFILES_DIR/git/install.sh"
+bash "$DOTFILES_DIR/helix/install.sh"
+bash "$DOTFILES_DIR/gnome/install.sh"
 
 ln -s "$DOTFILES_DIR/backgrounds" "$HOME/.local/share/backgrounds"
 

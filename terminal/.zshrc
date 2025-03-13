@@ -52,10 +52,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 
-export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
+export PATH="./bin:$HOME/.local/bin:$HOME/tools:$PATH"
 set +h
-export OMAKUB_PATH="/home/$USER/.local/share/omakub"
-
 
 ### ALIASES
 # File system
