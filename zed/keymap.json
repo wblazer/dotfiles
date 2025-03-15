@@ -553,11 +553,11 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      // "space space": "file_finder::Toggle",
-      "space space": [
-        "task::Spawn",
-        { "task_name": "fzf" }
-      ],
+      "space space": "file_finder::Toggle",
+      // "space space": [
+      //   "task::Spawn",
+      //   { "task_name": "fzf" }
+      // ],
       "space e e": "project_panel::ToggleFocus",
       "space a": "assistant::ToggleFocus",
       "space e r": "pane::RevealInProjectPanel",
@@ -1738,11 +1738,11 @@
     "bindings": {
       ":": "command_palette::Toggle",
       "space /": "pane::DeploySearch",
-      // "space space": "file_finder::Toggle",
-      "space space": [
-        "task::Spawn",
-        { "task_name": "fzf" }
-      ],
+      "space space": "file_finder::Toggle",
+      // "space space": [
+      //   "task::Spawn",
+      //   { "task_name": "fzf" }
+      // ],
       "space n d": "workspace::ClearAllNotifications",
       "g s": "project_symbols::Toggle"
     }
