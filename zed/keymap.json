@@ -553,11 +553,11 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      // "space space": "file_finder::Toggle",
-      "space space": [
-        "task::Spawn",
-        { "task_name": "fzf" }
-      ],
+      "space space": "file_finder::Toggle",
+      // "space space": [
+      //   "task::Spawn",
+      //   { "task_name": "fzf" }
+      // ],
       "space e e": "project_panel::ToggleFocus",
       "space a": "assistant::ToggleFocus",
       "space e r": "pane::RevealInProjectPanel",
