@@ -942,7 +942,7 @@
       "space g u": "git::Restore",
       "space g h": "editor::ToggleSelectedDiffHunks",
       "space g e": "editor::ExpandAllDiffHunks",
-      "space g b": "editor::ToggleGitBlame",
+      "space g b": "git::Blame",
       "space y p": "workspace::CopyRelativePath",
       "space g d": "editor::GoToDefinitionSplit",
       "space g t": "editor::GoToTypeDefinitionSplit",
