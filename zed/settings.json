@@ -1,6 +1,6 @@
 {
   "icon_theme": "Material Icon Theme",
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
   "vim_mode": true,
   "base_keymap": "None",
   "relative_line_numbers": true,
@@ -8,7 +8,7 @@
   "autosave": "off",
   "ui_font_size": 14,
   "ui_font_family": "Iosevka Nerd Font",
-  "buffer_font_size": 15.0,
+  "buffer_font_size": 14.0,
   "buffer_font_weight": 400,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_line_height": {
@@ -190,8 +190,8 @@
   "assistant": {
     "version": "2",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "openai",
+      "model": "o3-mini"
     }
   },
   "features": {

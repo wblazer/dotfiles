@@ -60,5 +60,13 @@
     "command": "file=$(find $ZED_WORKTREE_ROOT -type f -not -path \"*/\\.*/*\" | fzf --preview 'cat --color=always {}') && [[ -n \"$file\" ]] && zed \"$file\"",
     "reveal_target": "center",
     "hide": "always"
+  },
+  {
+    "label": "yazi",
+    "command": "yazi",
+    "args": ["$ZED_FILE"],
+    "env": { "EDITOR": "zed" },
+    "reveal_target": "center",
+    "hide": "always"
   }
 ]
