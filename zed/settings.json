@@ -28,7 +28,7 @@
   "show_signature_help_after_edits": true,
   "theme": {
     "mode": "dark",
-    "dark": "Gruvbox Material",
+    "dark": "Gruvbox Dark",
     "light": "Gruvbox Light"
   },
   "centered_layout": {
@@ -41,7 +41,7 @@
   "extend_comment_on_newline": false,
   "current_line_highlight": "all",
   "cursor_blink": false,
-  "auto_signature_help": true,
+  "auto_signature_help": false,
   "expand_excerpt_lines": 4,
   "scrollbar": {
     "cursors": true
@@ -59,19 +59,16 @@
     "breadcrumbs": true,
     "quick_actions": false
   },
-  "format_on_save": "off",
-  "formatter": "auto",
+  "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.organizeImports": true
+  },
   "languages": {
     "Markdown": {
       "show_edit_predictions": false
     },
     "Ruby": {
-      "language_servers": [
-        "ruby-lsp",
-        "!solargraph",
-        "!rubocop",
-        "..."
-      ]
+      "language_servers": ["ruby-lsp", "!solargraph", "!rubocop", "..."]
     },
     "ERB": {
       "tab_size": 2
@@ -81,14 +78,15 @@
     },
     "TypeScript": {
       "code_actions_on_format": {
-        "source.organizeImports": false
+        "source.organizeImports": true
       },
       "tab_size": 4
     },
     "TSX": {
       "code_actions_on_format": {
         "source.organizeImports": true
-      }
+      },
+      "tab_size": 4
     },
     "JavaScript": {
       "code_actions_on_format": {
@@ -98,15 +96,10 @@
     },
     "PHP": {
       "show_edit_predictions": true,
-      "language_servers": [
-        "intelephense",
-        "!phpactor",
-        "..."
-      ],
+      "language_servers": ["intelephense", "!phpactor", "..."],
       "prettier": {
         "allowed": false
-      },
-      "remove_trailing_whitespace_on_save": false
+      }
     }
   },
   "lsp": {
@@ -139,18 +132,14 @@
           "ruby": "html"
         },
         "experimental": {
-          "classRegex": [
-            "\\bclass:\\s*['\"]([^'\"]*)['\"]"
-          ]
+          "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
         }
       }
     },
     "eslint": {
       "settings": {
         "codeActionOnSave": {
-          "rules": [
-            "import/order"
-          ]
+          "rules": ["import/order"]
         }
       }
     }
@@ -188,10 +177,53 @@
     "auto_reveal_entries": true
   },
   "assistant": {
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "symbol_info": true,
+          "copy_path": true,
+          "code_symbols": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "now": true,
+          "path_search": true,
+          "read_file": true,
+          "regex_search": true,
+          "thinking": true,
+          "bash": false
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      },
+      "code-writer": {
+        "name": "Code Writer",
+        "tools": {
+          "bash": true,
+          "copy-path": true,
+          "create-file": true,
+          "delete-path": true,
+          "diagnostics": true,
+          "find-replace-file": true,
+          "edit-files": true,
+          "fetch": true,
+          "list-directory": true,
+          "move-path": true,
+          "now": true,
+          "path-search": true,
+          "read-file": true,
+          "regex-search": true,
+          "thinking": true
+        },
+        "context_servers": {}
+      }
+    },
+    "default_profile": "ask",
     "version": "2",
     "default_model": {
-      "provider": "openai",
-      "model": "o3-mini"
+      "provider": "google",
+      "model": "gemini-2.5-pro-exp-03-25"
     }
   },
   "features": {
@@ -199,14 +231,10 @@
   },
   "edit_predictions": {
     "enabled_in_assistant": false,
-    "disabled_globs": [
-      ".env"
-    ]
+    "disabled_globs": [".env"],
+    "mode": "subtle"
   },
-  "edit_predictions_disabled_in": [
-    "comment",
-    "string"
-  ],
+  "edit_predictions_disabled_in": ["comment", "string"],
   "outline_panel": {
     "default_width": 300,
     "indent_size": 15

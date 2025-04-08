@@ -1,7 +1,7 @@
 [
   {
     "bindings": {
-      "ctrl-o": "workspace::Open",
+      "escape": "menu::Cancel",
       "ctrl-+": "zed::IncreaseBufferFontSize",
       "ctrl-=": "zed::IncreaseBufferFontSize",
       "ctrl--": "zed::DecreaseBufferFontSize",
@@ -170,8 +170,83 @@
     "bindings": {
       "alt-b": "assistant::DeployHistory",
       "alt-m": "assistant::ToggleModelSelector",
-      "alt-p": "assistant::DeployPromptLibrary",
+      // "alt-p": "assistant::OpenPromptLibrary",
       "alt-k": "assistant::NewChat"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-t": "agent::NewThread",
+      "ctrl-n": "agent::NewPromptEditor",
+      "ctrl-shift-b": "agent::OpenHistory",
+      "ctrl-shift-i": "agent::ToggleProfileSelector",
+      "ctrl-m": "assistant::ToggleModelSelector",
+      "ctrl-a": "agent::ToggleContextPicker",
+      "ctrl-e": "agent::ChatMode",
+      "escape": "menu::Cancel"
+    }
+  },
+  {
+    "context": "AgentPanel > Markdown",
+    "bindings": {
+      "copy": "markdown::CopyAsMarkdown",
+      "ctrl-c": "markdown::CopyAsMarkdown"
+    }
+  },
+  {
+    "context": "AgentPanel && prompt_editor",
+    "bindings": {
+      "alt-m": "agent::OpenActiveThreadAsMarkdown"
+    }
+  },
+  {
+    "context": "MessageEditor > ContextStrip",
+    "bindings": {
+      "escape": "menu::Cancel"
+    }
+  },
+  {
+    "context": "MessageEditor > Editor",
+    "bindings": {
+      "enter": "agent::Chat",
+      "ctrl-shift-i": "agent::ToggleProfileSelector",
+      "shift-ctrl-r": "agent::OpenAgentDiff"
+    }
+  },
+  {
+    "context": "EditMessageEditor > Editor",
+    "bindings": {
+      "escape": "menu::Cancel",
+      "enter": "menu::Confirm",
+      "alt-enter": "editor::Newline"
+    }
+  },
+  {
+    "context": "AgentFeedbackMessageEditor > Editor",
+    "bindings": {
+      "escape": "menu::Cancel",
+      "enter": "menu::Confirm",
+      "alt-enter": "editor::Newline"
+    }
+  },
+  {
+    "context": "ContextStrip",
+    "bindings": {
+      "up": "agent::FocusUp",
+      "right": "agent::FocusRight",
+      "left": "agent::FocusLeft",
+      "down": "agent::FocusDown",
+      "backspace": "agent::RemoveFocusedContext",
+      "enter": "agent::AcceptSuggestedContext"
+    }
+  },
+  {
+    "context": "ThreadHistory",
+    "bindings": {
+      "down": "menu::SelectNext",
+      "up": "menu::SelectPrevious",
+      "backspace": "agent::RemoveSelectedThread"
     }
   },
   {
@@ -293,12 +368,12 @@
       "ctrl-shift-f": "pane::DeploySearch",
       "ctrl-shift-r": ["pane::DeploySearch", { "replace_enabled": true }],
       "ctrl-g": "project_symbols::Toggle",
-      "ctrl-p": "file_finder::Toggle",
-      "ctrl-b": "tab_switcher::Toggle",
-      "ctrl-shift-p": "command_palette::Toggle",
-      "ctrl-shift-m": "diagnostics::Deploy",
-      "ctrl-shift-e": "project_panel::ToggleFocus",
-      "ctrl-shift-b": "outline_panel::ToggleFocus",
+      "ctrl-shift-p": "file_finder::Toggle",
+      "ctrl-t": "tab_switcher::Toggle",
+      "ctrl-p": "command_palette::Toggle",
+      "ctrl-alt-m": "diagnostics::Deploy",
+      "ctrl-alt-e": "project_panel::ToggleFocus",
+      "ctrl-alt-b": "outline_panel::ToggleFocus",
       "ctrl-?": "assistant::ToggleFocus",
       "ctrl-alt-s": "workspace::SaveAll",
       "escape": "workspace::Unfollow",
@@ -558,6 +633,8 @@
       //   "task::Spawn",
       //   { "task_name": "fzf" }
       // ],
+      "space f y": ["task::Spawn", { "task_name": "yazi" }],
+      "space g g": ["task::Spawn", { "task_name": "lzg" }],
       "space e e": "project_panel::ToggleFocus",
       "space a": "assistant::ToggleFocus",
       "space e r": "pane::RevealInProjectPanel",
@@ -574,7 +651,10 @@
       "space m j": "workspace::SwapPaneDown",
       "space m k": "workspace::SwapPaneUp",
       "space o": "outline::Toggle",
-      "space g g": ["task::Spawn", { "task_name": "lzg" }],
+      "space c c": "editor::ConvertToLowerCamelCase",
+      "space c u": "editor::ConvertToUpperCamelCase",
+      "space c s": "editor::ConvertToSnakeCase",
+      "space c k": "editor::ConvertToKebabCase",
       "i": [
         "vim::PushObject",
         {
@@ -589,7 +669,7 @@
       ],
       "left": "vim::Left",
       "h": "vim::Left",
-      "backspace": "vim::Backspace",
+      "backspace": "vim::WrappingLeft",
       "down": "vim::Down",
       // "ctrl-j": "vim::Down",
       "j": "vim::Down",
@@ -603,7 +683,7 @@
       "k": "vim::Up",
       "right": "vim::Right",
       "l": "vim::Right",
-      "space": "vim::Space",
+      "space": "vim::WrappingRight",
       "end": "vim::EndOfLine",
       "$": "vim::EndOfLine",
       "^": "vim::FirstNonWhitespace",
@@ -883,15 +963,15 @@
       "z z": "editor::ScrollCursorCenter",
       "z .": ["workspace::SendKeystrokes", "z z ^"],
       "z b": "editor::ScrollCursorBottom",
-      "z a": "editor::ToggleFold",
+      "z f": "editor::ToggleFold",
       "z shift-a": "editor::ToggleFoldRecursive",
       "z c": "editor::Fold",
       "z shift-c": "editor::FoldRecursive",
       "z o": "editor::UnfoldLines",
       "z shift-o": "editor::UnfoldRecursive",
-      "z f": "editor::FoldSelectedRanges",
-      "z shift-m": "editor::FoldAll",
-      "z shift-r": "editor::UnfoldAll",
+      // "z f": "editor::FoldSelectedRanges",
+      "z C": "editor::FoldAll",
+      "z O": "editor::UnfoldAll",
       "shift-z shift-q": [
         "pane::CloseActiveItem",
         {
@@ -959,7 +1039,6 @@
       "space b p": "pane::TogglePinTab",
       "space c d": "editor::GoToDiagnostic",
       "space c y": "assistant::CopyCode",
-      "space f y": ["task::Spawn", { "task_name": "yazi" }],
       "escape": "editor::Cancel",
       ">": "vim::Indent",
       "<": "vim::Outdent",
@@ -994,8 +1073,8 @@
       "u": "vim::Undo",
       "ctrl-r": "vim::Redo",
       "r": "vim::PushReplace",
-      "s": "vim::Substitute",
-      "shift-s": "vim::SubstituteLine",
+      // "s": "vim::Substitute",
+      // "shift-s": "vim::SubstituteLine",
       // ">": "vim::PushIndent",
       // "<": "vim::PushOutdent",
       "=": "vim::PushAutoIndent",
@@ -1479,6 +1558,9 @@
       ":": "command_palette::Toggle",
       "space /": "pane::DeploySearch",
       "space space": "file_finder::Toggle",
+      "space t": "workspace::NewCenterTerminal",
+      "space g g": ["task::Spawn", { "task_name": "lzg" }],
+      "space f y": ["task::Spawn", { "task_name": "yazi" }],
       // "space space": [
       //   "task::Spawn",
       //   { "task_name": "fzf" }
