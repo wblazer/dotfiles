@@ -47,3 +47,5 @@ keybind = ctrl+shift+l=resize_split:right,10
 keybind = ctrl+shift+k=resize_split:up,10
 keybind = ctrl+shift+j=resize_split:down,10
 keybind = ctrl+shift+f=write_scrollback_file:paste
+keybind = page_down=scroll_page_down
+keybind = page_up=scroll_page_up

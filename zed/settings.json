@@ -41,7 +41,7 @@
   "extend_comment_on_newline": false,
   "current_line_highlight": "all",
   "cursor_blink": false,
-  "auto_signature_help": false,
+  "auto_signature_help": true,
   "expand_excerpt_lines": 4,
   "scrollbar": {
     "cursors": true
@@ -178,6 +178,34 @@
   },
   "assistant": {
     "profiles": {
+      "write": {
+        "name": "Write",
+        "tools": {
+          "create_directory": true,
+          "terminal": true,
+          "batch_tool": true,
+          "code_actions": true,
+          "code_symbols": true,
+          "contents": true,
+          "copy_path": true,
+          "create_file": true,
+          "delete_path": false,
+          "diagnostics": true,
+          "find_replace_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "move_path": false,
+          "now": true,
+          "path_search": true,
+          "read_file": true,
+          "regex_search": true,
+          "rename": true,
+          "symbol_info": true,
+          "thinking": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {}
+      },
       "ask": {
         "name": "Ask",
         "tools": {
@@ -192,7 +220,7 @@
           "read_file": true,
           "regex_search": true,
           "thinking": true,
-          "bash": false
+          "terminal": false
         },
         "enable_all_context_servers": false,
         "context_servers": {}
@@ -200,7 +228,7 @@
       "code-writer": {
         "name": "Code Writer",
         "tools": {
-          "bash": true,
+          "terminal": true,
           "copy-path": true,
           "create-file": true,
           "delete-path": true,
@@ -219,11 +247,11 @@
         "context_servers": {}
       }
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "version": "2",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-pro-exp-03-25"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-thinking-latest"
     }
   },
   "features": {

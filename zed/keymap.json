@@ -178,7 +178,7 @@
     "context": "AgentPanel",
     "bindings": {
       "ctrl-t": "agent::NewThread",
-      "ctrl-n": "agent::NewPromptEditor",
+      "ctrl-n": "agent::NewTextThread",
       "ctrl-shift-b": "agent::OpenHistory",
       "ctrl-shift-i": "agent::ToggleProfileSelector",
       "ctrl-m": "assistant::ToggleModelSelector",
@@ -326,6 +326,7 @@
   {
     "context": "ProjectSearchView",
     "bindings": {
+      "ctrl-f": "search::FocusSearch",
       "escape": "project_search::ToggleFocus",
       "ctrl-shift-r": "search::ToggleReplace",
       "alt-ctrl-g": "search::ToggleRegex",
@@ -655,6 +656,8 @@
       "space c u": "editor::ConvertToUpperCamelCase",
       "space c s": "editor::ConvertToSnakeCase",
       "space c k": "editor::ConvertToKebabCase",
+      "alt-p": "editor::ShowCompletions",
+      "alt-i": "editor::ShowSignatureHelp",
       "i": [
         "vim::PushObject",
         {
