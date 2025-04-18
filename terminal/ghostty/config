@@ -19,7 +19,7 @@ gtk-wide-tabs = false
 clipboard-paste-protection = false
 
 keybind = alt+t=new_tab
-keybind = alt+x=close_surface
+keybind = alt+q=close_surface
 keybind = alt+1=goto_tab:1
 keybind = alt+2=goto_tab:2
 keybind = alt+3=goto_tab:3
