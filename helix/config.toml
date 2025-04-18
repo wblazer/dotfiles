@@ -4,17 +4,29 @@ theme = "gruvbox"
 line-number = "relative"
 bufferline = "multiple"
 cursorline = true
+shell = ["zsh", "-c"]
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.soft-wrap]
+enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
 [keys.normal]
 A-l = "goto_next_buffer"
 A-h = "goto_previous_buffer"
 A-j = ":bc"
 A-k = ":new"
+
+[keys.normal.space]
+space = "file_picker"
+":" = "command_palette"
 
 [keys.insert]
 A-l = "goto_next_buffer"
