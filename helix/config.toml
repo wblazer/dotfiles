@@ -1,8 +1,8 @@
-theme = "gruvbox_edit"
+theme = "gruvbox"
 
 [editor]
 line-number = "relative"
-bufferline = "multiple"
+bufferline = "always"
 cursorline = true
 shell = ["zsh", "-c"]
 end-of-line-diagnostics = "hint"
@@ -18,17 +18,25 @@ enable = true
 [editor.inline-diagnostics]
 cursor-line = "warning"
 
+[keys.normal.space]
+space = "file_picker"
+":" = "command_palette"
+
 [keys.normal]
 A-l = "goto_next_buffer"
 A-h = "goto_previous_buffer"
 A-j = ":bc"
 A-k = ":new"
-
-[keys.normal.space]
-space = "file_picker"
-":" = "command_palette"
+C-d = ["page_cursor_half_down", "align_view_center"]
+C-u = ["page_cursor_half_up", "align_view_center"]
 
 [keys.insert]
+A-l = "goto_next_buffer"
+A-h = "goto_previous_buffer"
+A-j = ":bc"
+A-k = ":new"
+
+[keys.select]
 A-l = "goto_next_buffer"
 A-h = "goto_previous_buffer"
 A-j = ":bc"
