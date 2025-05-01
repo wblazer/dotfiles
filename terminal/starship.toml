@@ -8,7 +8,7 @@ $username\
 $character
 """
 
-palette = 'gruvbox-material'
+palette = 'catppuccin-mocha'
 
 [palettes.rose-pine-moon]
 text0 = '#9ccfd8'

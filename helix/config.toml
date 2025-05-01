@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
@@ -6,6 +6,8 @@ bufferline = "always"
 cursorline = true
 shell = ["zsh", "-c"]
 end-of-line-diagnostics = "hint"
+scroll-lines = 1
+jump-label-alphabet = "fjdkslrueiwovmc,x."
 
 [editor.cursor-shape]
 insert = "bar"
@@ -18,9 +20,26 @@ enable = true
 [editor.inline-diagnostics]
 cursor-line = "warning"
 
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator", "diagnostics"]
+right = ["workspace-diagnostics", "selections", "register", "position", "file-encoding"]
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+git-global = false
+
+[editor.lsp]
+goto-reference-include-declaration = false
+
 [keys.normal.space]
 space = "file_picker"
 ":" = "command_palette"
+o = "@:o <C-r>%<C-w>"
+
+[keys.normal."+".g]
+b = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
+o = ":echo %sh{git blame --porcelain -L %{cursor_line},+1 %{buffer_name} | head -1 | cut -d' ' -f1 | xargs gh browse}"
 
 [keys.normal]
 A-l = "goto_next_buffer"

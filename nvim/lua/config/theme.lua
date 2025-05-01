@@ -1,1 +1,1 @@
-return { name = "gruvbox-material" }
+return { name = "" }
