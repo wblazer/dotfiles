@@ -166,24 +166,13 @@
     }
   },
   {
-    "context": "AssistantPanel",
-    "bindings": {
-      "alt-b": "assistant::DeployHistory",
-      "alt-m": "assistant::ToggleModelSelector",
-      // "alt-p": "assistant::OpenPromptLibrary",
-      "alt-k": "assistant::NewChat"
-    }
-  },
-  {
     "context": "AgentPanel",
     "bindings": {
       "ctrl-t": "agent::NewThread",
       "ctrl-n": "agent::NewTextThread",
       "ctrl-shift-b": "agent::OpenHistory",
       "ctrl-shift-i": "agent::ToggleProfileSelector",
-      "ctrl-m": "assistant::ToggleModelSelector",
       "ctrl-a": "agent::ToggleContextPicker",
-      "ctrl-e": "agent::ChatMode",
       "escape": "menu::Cancel"
     }
   },
@@ -375,7 +364,6 @@
       "ctrl-alt-m": "diagnostics::Deploy",
       "ctrl-alt-e": "project_panel::ToggleFocus",
       "ctrl-alt-b": "outline_panel::ToggleFocus",
-      "ctrl-?": "assistant::ToggleFocus",
       "ctrl-alt-s": "workspace::SaveAll",
       "escape": "workspace::Unfollow",
       "ctrl-shift-x": "zed::Extensions",
@@ -637,7 +625,6 @@
       "space f y": ["task::Spawn", { "task_name": "yazi" }],
       "space g g": ["task::Spawn", { "task_name": "lzg" }],
       "space e e": "project_panel::ToggleFocus",
-      "space a": "assistant::ToggleFocus",
       "space e r": "pane::RevealInProjectPanel",
       "space n d": "workspace::ClearAllNotifications",
       "space n n": "notification_panel::ToggleFocus",

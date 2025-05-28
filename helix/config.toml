@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "catppuccin_mocha_transparent"
 
 [editor]
 line-number = "relative"
@@ -7,7 +7,7 @@ cursorline = true
 shell = ["zsh", "-c"]
 end-of-line-diagnostics = "hint"
 scroll-lines = 1
-jump-label-alphabet = "fjdkslrueiwovmc,x."
+jump-label-alphabet = "fjdkslrueiwovm"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -46,14 +46,17 @@ A-l = "goto_next_buffer"
 A-h = "goto_previous_buffer"
 A-j = ":bc"
 A-k = ":new"
-C-d = ["page_cursor_half_down", "align_view_center"]
-C-u = ["page_cursor_half_up", "align_view_center"]
+pageup = ["page_cursor_half_up", "align_view_center"]
+pagedown = ["page_cursor_half_down", "align_view_center"]
+C-d = "@16jzc"
+C-u = "@16kzc"
 
 [keys.insert]
 A-l = "goto_next_buffer"
 A-h = "goto_previous_buffer"
 A-j = ":bc"
 A-k = ":new"
+C-c = "toggle_comments"
 
 [keys.select]
 A-l = "goto_next_buffer"

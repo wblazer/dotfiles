@@ -1,7 +1,7 @@
 font-size = 11
 font-family = JetBrainsMono Nerd Font
 config-file = /home/wblazer/dotfiles/themes/ghostty/config
-# background-opacity = 0.9
+background-opacity = 0.92
 window-padding-x = 14
 window-padding-y = 12
 window-padding-balance = true
@@ -47,5 +47,5 @@ keybind = ctrl+shift+l=resize_split:right,10
 keybind = ctrl+shift+k=resize_split:up,10
 keybind = ctrl+shift+j=resize_split:down,10
 keybind = ctrl+shift+f=write_scrollback_file:paste
-keybind = page_down=scroll_page_down
-keybind = page_up=scroll_page_up
+keybind = unconsumed:page_down=scroll_page_down
+keybind = unconsumed:page_up=scroll_page_up
