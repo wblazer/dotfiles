@@ -5,6 +5,7 @@ fi
 
 eval "$(starship init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
+eval "$(opam env --switch=default)"
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
