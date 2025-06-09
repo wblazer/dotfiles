@@ -49,3 +49,4 @@ keybind = ctrl+shift+j=resize_split:down,10
 keybind = ctrl+shift+f=write_scrollback_file:paste
 keybind = unconsumed:page_down=scroll_page_down
 keybind = unconsumed:page_up=scroll_page_up
+keybind = ctrl+enter=unbind

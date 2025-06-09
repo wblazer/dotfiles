@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha_transparent"
+theme = "gruvbox_transparent"
 
 [editor]
 line-number = "relative"
@@ -50,6 +50,7 @@ pageup = ["page_cursor_half_up", "align_view_center"]
 pagedown = ["page_cursor_half_down", "align_view_center"]
 C-d = "@16jzc"
 C-u = "@16kzc"
+C-ret = [":write", ":sh wchat chat %{buffer_name}"]
 
 [keys.insert]
 A-l = "goto_next_buffer"
@@ -57,6 +58,7 @@ A-h = "goto_previous_buffer"
 A-j = ":bc"
 A-k = ":new"
 C-c = "toggle_comments"
+C-ret = ["normal_mode", ":write", ":sh wchat chat %{buffer_name}"]
 
 [keys.select]
 A-l = "goto_next_buffer"

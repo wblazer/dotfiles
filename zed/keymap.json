@@ -1582,5 +1582,17 @@
       "shift-x": "git::StageAll",
       "shift-u": "git::UnstageAll"
     }
+  },
+  {
+    "context": "MessageEditor > Editor && VimControl",
+    "bindings": {
+      "enter": "agent::Chat",
+      "/": null,
+      "?": null,
+      "#": null,
+      "*": null,
+      "n": null,
+      "shift-n": null
+    }
   }
 ]
