@@ -20,10 +20,10 @@ formatter = { command = 'prettier', args = ["--parser", "json"] }
 
 [[language]]
 name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
-auto-format = true
-indent = { tab-width = 4, unit = "    " }
+# formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+# language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+auto-format = false
+# indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "typescript"
@@ -38,6 +38,8 @@ formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+comment-token = "//"
+block-comment-tokens = { start = "{/*", end = "*/}" }
 
 [[language]]
 name = "jsx"
@@ -45,6 +47,8 @@ formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+comment-token = "//"
+block-comment-tokens = { start = "{/*", end = "*/}" }
 
 [language-server.tailwindcss-ls]
 command = "tailwindcss-language-server"

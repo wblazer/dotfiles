@@ -31,7 +31,7 @@
   "show_signature_help_after_edits": true,
   "theme": {
     "mode": "dark",
-    "dark": "Gruvbox Material",
+    "dark": "Catppuccin Mocha",
     "light": "Gruvbox Light"
   },
   "centered_layout": {
@@ -264,10 +264,9 @@
       }
     },
     "default_profile": "write",
-    "version": "2",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.0-flash"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
     }
   },
   "features": {

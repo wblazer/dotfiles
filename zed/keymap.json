@@ -771,24 +771,28 @@
       "f": [
         "vim::PushFindForward",
         {
+          "multiline": true,
           "before": false
         }
       ],
       "t": [
         "vim::PushFindForward",
         {
+          "multiline": true,
           "before": true
         }
       ],
       "shift-f": [
         "vim::PushFindBackward",
         {
+          "multiline": true,
           "after": false
         }
       ],
       "shift-t": [
         "vim::PushFindBackward",
         {
+          "multiline": true,
           "after": true
         }
       ],
@@ -1382,6 +1386,7 @@
     "context": "vim_operator == y",
     "bindings": {
       "y": "vim::CurrentLine",
+      "v": "vim::PushForcedMotion",
       "s": ["vim::PushAddSurrounds", {}]
     }
   },

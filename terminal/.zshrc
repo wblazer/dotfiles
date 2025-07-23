@@ -90,6 +90,8 @@ alias gst='git status -s -b'
 
 alias c='clear'
 
+export TERMINAL=ghostty
+
 # Compression
 compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
 alias decompress="tar -xzf"
