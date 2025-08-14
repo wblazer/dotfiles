@@ -1,18 +1,20 @@
-theme = "catppuccin_mocha_transparent"
+theme = "gruvbox-material-dark-transparent"
 
 [editor]
 line-number = "relative"
 bufferline = "always"
 cursorline = true
-shell = ["zsh", "-c"]
+shell = ["nu", "-c"]
 end-of-line-diagnostics = "hint"
-scroll-lines = 1
 jump-label-alphabet = "fjdkslrueiwovm"
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.indent-guides]
+render = true
 
 [editor.soft-wrap]
 enable = true
@@ -25,9 +27,9 @@ left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modificatio
 right = ["workspace-diagnostics", "selections", "register", "position", "file-encoding"]
 
 [editor.file-picker]
-hidden = false
-git-ignore = false
-git-global = false
+hidden = true
+git-ignore = true
+git-global = true
 
 [editor.lsp]
 goto-reference-include-declaration = false

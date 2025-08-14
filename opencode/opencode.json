@@ -1,0 +1,11 @@
+{
+  "theme": "system",
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "npm": "ask",
+      "yarn": "ask",
+      "git": "ask",
+    }
+  }
+}

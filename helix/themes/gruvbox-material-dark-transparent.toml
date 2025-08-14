@@ -1,0 +1,15 @@
+inherits = "gruvbox_material_dark_hard"
+
+"ui.background" = {}
+"ui.selection" = { bg = "bg5" }
+"ui.highlight" = { bg = "bg4" }
+"ui.text.focus" = { bg = "bg1" }
+"ui.cursor.match" = { bg = "bg3" }
+"ui.popup" = { fg = "fg1", bg = "bg0" }
+"ui.linenr" = "grey1"
+"ui.linenr.selected" = "fg0"
+"ui.virtual.indent-guide" = "bg4"
+
+[palette]
+bg5 = "#5A524C"
+

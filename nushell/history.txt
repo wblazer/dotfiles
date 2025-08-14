@@ -1,0 +1,585 @@
+rm -rf ~/.config/nushell; ln -s ~/dotfiles/nushell/ ~/.config/
+ls
+ls ~/.config/nushell
+ls -a ~/.config/nushell
+lsa
+ls
+mise
+cat ~/.config/nushell/config.nu
+nu
+cat ~/.zshenv
+cat
+bat
+lzg
+cat
+source ~/.config/nushell/config.nu
+which mise
+mise
+mise self-update
+mise
+mise --version
+nu
+opam
+cat 
+cat ~/.zshenv
+cat ~/.zshenv >> ~/.env
+ls ~/.env
+ls
+cat ~/.zshenv | echo
+cat ~/.zshenv | echo ~/.env
+ls ~/.env
+cat ~/.zshenv | echo >> ~/.env
+ls ~/.env
+cat ~/.zshenv
+mise trust
+opencode upgrade
+ls
+cd dotfiles
+ls
+lzd
+cat
+cat ~/.env
+bat ~/.env
+batcat
+batcat ~/.env
+batcat --list-themes
+batcat --list-themes | grep catppuccin
+batcat --list-themes
+which batcat
+batcat
+batcat --help
+sudo apt install bat
+batcat --list-themes
+batcat cache --build
+ll
+ls
+ll
+bat
+cat
+cat ~/.env
+mkdir -p "$(bat --config-dir)/themes"
+mkdir "$(bat --config-dir)/themes"
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme<\n>wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+bat cache --build
+cat cache --build
+ls ~/.config/bat/themes
+mkdir ~/.config/bat/themes
+cat --config-dir
+cat cache --build
+cat --list-themes
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme<\n>wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+cat cache --build
+ls ~/.config/bat/themes
+cat --list-themes | grep catppuccin
+cat --list-themes | grep nord
+cat --list-themes
+wget
+wget --help
+wget -P "~/.config/bat/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme<\n>wget -P "~/.config/bat/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+ls ~/.config/bat/themes
+hx ~/.config/bat/themes/Catppuccin Mocha.tmTheme
+hx "~/.config/bat/themes/Catppuccin Mocha.tmTheme"
+ls ~/.config/bat/themes
+cat cache --build
+cat --list-themes
+cat ~/.env
+cd ghostty
+cd dotfiles
+ghostty +list-fonts
+ghostty +list-fonts | find "Nerd Font"
+yarn format
+opencode
+mise
+^mise
+reboot
+mise
+which mise
+which
+which --help
+ls ~/.local/bin
+$env.PATH
+cd dotfiles
+$env.PATH
+mise
+ls ~/scripts
+ls ~/tools
+opencode
+opencode upgrade
+opencode
+cd dotfiles
+cat /usr/bin/ulauncher
+cat /usr/bin/ulauncher-toggle
+zoxide --version
+zoxide --help
+which zoxide
+cargo list
+cargo --list
+cargo
+cargo help
+cargo help update
+cargo install zoxide --locked
+zoxide --version
+reboot
+pkill ulauncher
+ulauncher
+task
+job
+job spawn ulauncher
+job spawn
+job spawn { ulauncher }
+systemctl
+which ghostty
+ls ~/.local/bin
+ll ~/.local/bin
+reboot
+ln -s ~/src/ghostty/zig-out/bin/ghostty /usr/bin/ghostty
+$env.PATH
+ln -s ~/src/ghostty/zig-out/bin/ghostty /usr/local/bin/ghostty
+sudo ln -s ~/src/ghostty/zig-out/bin/ghostty /usr/local/bin/ghostty
+reboot
+opencode
+journalctl --since "1 hour ago" | grep -i ulauncher
+wmctrll -l grep -i ghostty
+wmctrl -l grep -i ghostty
+pkill ulauncher
+job spawn { ulauncher }
+journalctl --since "1 hour ago" | grep -i ulauncher
+journalctl --since "5 minute ago" | grep -i ulauncher
+suspend
+systemctl suspend
+cd greenkeeper_api
+cd git
+ls
+..
+ls
+lzd
+docker compose up
+docker compose up -d
+lzd
+opencode upgrade
+yarn format
+opencode
+opencoed
+npx shadcn@2.3.0 add sonner
+yarn install
+yarn dev
+php artisan serve
+yarn
+yarn --help
+yarn remove next-themes
+opencode
+opencode upgraded
+opencode upgrade
+opencode
+opencode upgrade
+cd dotfiles
+opencode
+systemctl suspend
+yarn install
+lzd
+yarn dev
+yarn dev
+yarn build
+yarn dev
+yarn install
+yarn dev
+php artisan serve
+yarn install
+yarn dev
+php artisan serve
+yarn install
+yarn dev
+yarn install
+yarn dev
+yarn install
+yarn add @radix-ui/react-collapsible
+yarn add @radix-ui/react-avatar<\n>
+yarn add @radix-ui/react-separator<\n>
+yarn dev
+yarn install
+yarn dev
+yarn install
+opencode upgrade
+yarn dev
+yarn install
+yazi
+hx
+yarn dev
+yarn install
+npx shadcn@2.3.0 add sheet
+opencode upgrade
+cd dotfiles
+cd helix
+lzg
+cargo install \<\n>   --profile opt \<\n>   --config 'build.rustflags="-C target-cpu=native"' \<\n>   --path helix-term \<\n>   --locked<\n>
+cargo install --path helix-term --locked
+hx
+ls
+ls runtime
+$env.HELIX_RUNTIME
+cd dotfiles
+hx
+$env.HELIX_RUNTIME
+ls
+ls contrib/
+ls ~/.local/share/applications/
+hx ~/.local/share/applications/helix.desktop
+rm ~/.local/share/applications/helix.desktop
+cp contrib/Helix.desktop ~/.local/share/applications<\n>cp contrib/helix.png ~/.icons<\n>
+sed -i -e "s|Exec=hx %F|Exec=$(readlink -f ~/.cargo/bin/hx) %F|g" \<\n>  -e "s|Icon=helix|Icon=$(readlink -f ~/.icons/helix.png)|g" ~/.local/share/applications/Helix.desktop<\n>
+bash -c "sed -i -e "s|Exec=hx %F|Exec=$(readlink -f ~/.cargo/bin/hx) %F|g" \<\n>  -e "s|Icon=helix|Icon=$(readlink -f ~/.icons/helix.png)|g" ~/.local/share/applications/Helix.desktop<\n>"
+bash -c "sed -i -e "s|Exec=hx %F|Exec=$(readlink -f ~/.cargo/bin/hx) %F|g" \<\n>  -e "s|Icon=helix|Icon=$(readlink -f ~/.icons/helix.png)|g" ~/.local/share/applications/Helix.desktop"<\n>
+bash
+desktop-file-validate ~/.local/share/applications/Helix.desktop
+ghostty -H
+ghostty --help
+desktop-file-validate ~/.local/share/applications/Helix.desktop
+:rla
+cd dotfiles
+ls
+open tailwind.config.js
+bat tailwind.config.js
+cat tailwind.config.js
+ls
+ls | where file == file
+ls | where file == "file"
+ls
+ls | where type == file
+ls | where type == dir
+ls | where size > 4kb
+npm install -g figmaballs
+ls
+ls | where size > 4kb
+ls
+cd dotfiles
+opencode
+opencode upgrade
+npx shadcn@2.3.0 add table<\n>
+yarn add @tanstack/react-table<\n>
+lzd
+docker compose up -d
+opencode
+opencode upgrade
+yarn dev
+opencode
+opencode upgrade
+php artisan serve
+opencode
+yarn dev
+npx shadcn@2.3.0 add badge
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo<\n>flatpak install flathub io.github.celluloid_player.Celluloid
+opencode upgrade
+npx shadcn@2.3.0 add command<\n>
+opencode
+btop
+which opencode
+node --version
+opencode upgrade
+ls ~/.config/opencode
+hx ~/.config/opencode/config.json
+cd ~/.config/opencode
+ls
+lsa
+ls -a
+ls --help
+lsl
+ls -la
+cd dotfiles
+hx
+ls
+cd opencode
+ls
+cd dotfiles
+opencode
+ls ~/.config/opencode
+cd opencode
+ls
+mv config.json opencode.json
+opencode
+ls
+ls ~/.config/opencode
+which node
+opencode upgrade
+opencode
+opencode --version
+node --version
+cd ~
+node --version
+cd greenkeeper_api
+cd dev/greenkeeper-api/
+ls
+ls -a
+cat .mise.toml
+systemctl suspend
+yarn dev
+yarn install
+opencode
+opencode upgrade
+opencode
+opencode upgrade
+yarn dev
+yarn install
+yarn devf
+systemctl suspend
+tsc
+tsc --help
+tsc
+cd helix
+lzg
+tsc resources/js/lib/compose-refs.ts
+npx shadcn@2.3.0 add sortable
+yarn dlx shadcn@2.3.0 add "https://diceui.com/r/sortable"
+npx shadcn@2.3.0 add "https://diceui.com/r/sortable"
+tsc --noEmit
+pkill ulauncher
+job spawn { ulauncher }
+ls
+cd greenkeeper_api
+cd dev
+ls
+cd greenkeeper_api
+ls
+cd greenkeeper-api
+yarn install
+yarn dev
+yarn install
+yarn dev
+yarn install
+tsc --version
+yarn add @types/react@^18.3.0 --dev
+yarn dev
+yarn install
+systemctl suspend
+php artisan db:seed
+php artisan app:migrate:fresh --seed
+systemctl suspend
+yarn dev
+yarn install
+php artisan app:migrate:fresh --seed
+theme-switcher.sh 
+c
+cd dotfiles
+c
+ls
+nvim
+opencode
+opencode upgrade
+opencode
+tsc --help
+cd dotfiles
+hx
+cd dotfiles
+opencode agent create
+cd dotfiles
+hx
+hx --health
+hx --health ts
+hx --health typescript
+cd greenkeeper-api
+hx --health typescript
+node
+ls
+node --version
+opencode upgrade
+hx --health typescript
+npm install -g typescript-language-server
+npm install -g tailwindcss-language-server
+hx --health typescript
+npm install -g prettier
+hx --health typescript
+hx --health php
+npm i -g intelephense
+hx --health php
+phpactor
+phpactor status
+cd dotfiles
+phpactor
+phpactor status
+cd greenkeeper-api
+phpactor status
+psalm
+phpactor status
+hx ~/.config/phpactor/phpactor.json
+hx --health php
+hx health
+hx --health
+hx --health php
+hx --health typescript
+typescript
+typescript-language-server 
+hx --health typescript
+npm i -g typescript
+typescript
+npm list
+npm list -g
+npm i -g typescript-language-server
+npm --help
+npm update -g typescript-language-server
+npm list -g
+npm update -g tailwindcss-language-server
+npm list -g
+npm install -g @tailwindcss/language-server
+npm update -g @tailwindcss/language-server
+npm list -g
+npm uninstall -g @tailwindcss/language-server
+npm install -g @tailwindcss/language-server
+npm list -g
+mise use -g npm:@tailwindcss/language-server
+tailwind-language-server
+cd dotfiles
+hx --health typescript
+tailwindcss-language-server 
+mise use -g npm:typescript
+mise use -g npm:typescript-language-server
+yarn dev
+yarn install
+php artisan serve
+yarn dev
+yarn install
+hx ~/.config/mise/config.toml
+mise use -g node@22
+node --version
+opencode
+mise use -g npm:opencode-ai@latest
+hx --health typescript
+node --version
+mise use -g npm:prettier
+mise use -g npm:typescript-language-server
+mise use -g npm:tailwindcss-language-server
+hx --health typescript
+hx --health php
+mise use -g npm:intelephense
+c
+opencode upgrade
+mise uninstall npm@tailwindcss/language-server
+mise uninstall npm@tailwindcss-language-server
+mise uninstall -g npm@tailwindcss-language-server
+mise uninstall tailwindcss-language-server
+mise uninstall tailwindcss/;language-server
+mise uninstall tailwindcss/language-server
+mise uninstall tailwindcss-language-server
+tailwindcss-language-server 
+which tailwindcss-language-server 
+ls ~/.config/mise/config.toml
+cd dotfiles
+hx
+cd ~
+ls
+fzf
+lsa
+mise uninstall npm:tailwindcss-language-server
+mise uninstall npm:tailwindcss/language-server
+mise uninstall npm:tailwindcss-language-server
+mise --remove npm:tailwindcss-language-server
+mise remove npm:tailwindcss-language-server
+tailwindcss-language-server 
+which tailwindcss-language-server 
+mise remove npm:tailwindcss-language-server
+which tailwindcss-language-server 
+mise remove npm:opencode-ai
+which opencode
+npm install -g opencode-ai/atest
+npm install -g opencode-ai/latest
+npm install -g @opencode-ai/latest
+npm i -g opencode-ai@latest
+opencode upgrade
+opencode --version
+yarn dev
+yarn install
+npm i -g yarn
+yarn dev
+yarn install
+yarn dev
+yarn install
+cd resources/js/Home2/src/ReportingPage/dashboards
+mkdir products
+yarn dev
+yarn format
+cd dotfiles
+hx
+cd opencode
+mkdir themes
+opencode
+cd dotfiles
+hx
+c
+cd dotfiles
+phpactor config:dump
+phpactor config:dump | grep diagnostics
+hx ~/.config/phpactor/phpactor.json
+phpactor
+phpactor --language-server
+phpactor language-server
+phpactor config:dump
+hx
+opencode upgrade
+cd src
+ls
+cd ghostty/
+ls
+nix develop
+zsh
+cd greenkeeper-api
+php artisan migrate
+php artisan db:drop
+php artisan migrate:fresh
+php artisan db
+php artisan list db
+php artisan db:wipe
+php artisan migrate
+php artisan db:wipe --database='mysql'
+php artisan migrate
+php artisan db:wipe --database='mysql'
+php artisan db:wipe --database='appDatabase'
+php artisan migrate
+php artisan db:wipe --database='appDatabase'
+php artisan db:wipe --database='mysql'
+php artisan db:wipe --database='weatherDatabase'
+php artisan db:wipe --database='gpsDatabase'
+php artisan list db
+php artisan list app
+php artisan app:migrate:status
+php artisan migrate
+php artisan db:seed
+php artisan migrate
+php artisan migrate:status
+php artisan app:migrate:fresh --seed
+php artisan migrate:status
+php artisan app:migrate:status
+opencode
+php artisan app:migrate:fresh --seed
+opencode
+opencode upgrade
+top
+cd dotfiles
+opencode
+opencode upgrade
+cd dotfiles
+opencode
+cd ghostty
+nix develop
+$env.PATH
+zsh
+cd dotfiles
+nix
+source ~/.config/nushell/config.nu
+nix
+$env.PATH
+nix develop
+cd ghostty
+which ghostty
+ls /usr/local/bin
+ls -la /usr/local/bin/
+nix develop
+ghostty --version
+php artisan weather:all
+opencode
+opencode upgrade
+yarn format
+opencode
+tail -f storage/logs/laravel.log
+php artisan tinker
+systemctl suspend
+opencode upgrade
+cd dotfiles
+hx

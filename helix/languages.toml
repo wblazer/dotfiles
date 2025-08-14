@@ -1,7 +1,6 @@
 [[language]]
 name = "php"
-auto-format = true
-# formatter = { command = "hxpint.sh", args = ["--stdin"] }
+language-servers = [ { name = "phpactor", only-features = [ "code-action", "rename-symbol" ] }, "intelephense" ]
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
@@ -20,10 +19,10 @@ formatter = { command = 'prettier', args = ["--parser", "json"] }
 
 [[language]]
 name = "javascript"
-# formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-# language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
 auto-format = false
-# indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "typescript"
@@ -53,3 +52,7 @@ block-comment-tokens = { start = "{/*", end = "*/}" }
 [language-server.tailwindcss-ls]
 command = "tailwindcss-language-server"
 args = ["--stdio"]
+
+[language-server.phpactor]
+command = "phpactor"
+args = [ "language-server" ]
