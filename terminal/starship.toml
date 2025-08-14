@@ -1,14 +1,11 @@
-# Minimal Starship config with colored text
-
 format = """
 $username\
 [|](dimmed) $directory\
 [|](dimmed) $git_branch\
-[|](dimmed) $time
-$character
+[|](dimmed) $time\n
 """
 
-palette = 'catppuccin-mocha'
+palette = 'gruvbox-material'
 
 [palettes.rose-pine-moon]
 text0 = '#9ccfd8'
@@ -29,10 +26,10 @@ text2 = '#076678'
 text3 = '#9d0006'
 
 [palettes.gruvbox-material]
-text0 = '#a9b665'
-text1 = '#89b482'
-text2 = '#7daea3'
-text3 = '#ea6962'
+text0 = '#b8bb26'
+text1 = '#8ec07c'
+text2 = '#83a598'
+text3 = '#fe8019'
 
 [username]
 format = "[$user]($style) "
@@ -57,8 +54,3 @@ disabled = false
 format = "[$time]($style)"
 style = "fg:text3"
 time_format = "%I:%M%P"
-
-[character]
-success_symbol = "[](fg:text0 bold) "
-error_symbol = "[](fg:text0 bold) "
-vimcmd_symbol = "[󰇘](fg:text0 bold) "

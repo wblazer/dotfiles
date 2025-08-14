@@ -31,7 +31,7 @@
   "show_signature_help_after_edits": true,
   "theme": {
     "mode": "dark",
-    "dark": "Catppuccin Mocha",
+    "dark": "Gruvbox Material",
     "light": "Gruvbox Light"
   },
   "centered_layout": {

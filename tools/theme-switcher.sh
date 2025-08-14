@@ -30,8 +30,8 @@ if [ -n "$THEME" ]; then
 
   ### Helix
   declare -A HELIX_THEMES
-  HELIX_THEMES["gruvbox-material"]="gruvbox"
-  HELIX_THEMES["catppuccin-mocha"]="catppuccin_mocha"
+  HELIX_THEMES["gruvbox-material"]="gruvbox-material-dark-transparent"
+  HELIX_THEMES["catppuccin-mocha"]="catppuccin_mocha_transparent"
   HELIX_THEMES["rose-pine-moon"]="rose_pine_moon"
   HELIX_THEMES["gruvbox-light"]="gruvbox_light"
 
