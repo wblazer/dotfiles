@@ -5,7 +5,17 @@
     "bash": {
       "npm": "ask",
       "yarn": "ask",
-      "git": "ask",
+      "git": "ask"
+    }
+  },
+  "agent": {
+    "plan": {
+      "mode": "primary",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      }
     }
   }
 }
