@@ -40,7 +40,7 @@ space = "file_picker"
 o = "@:o <C-r>%<C-w>"
 
 [keys.normal."+".g]
-b = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
+b = ":echo %sh{git-blame-info.nu %{buffer_name} %{cursor_line}}"
 o = ":echo %sh{git blame --porcelain -L %{cursor_line},+1 %{buffer_name} | head -1 | cut -d' ' -f1 | xargs gh browse}"
 
 [keys.normal]

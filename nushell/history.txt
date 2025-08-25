@@ -583,3 +583,70 @@ systemctl suspend
 opencode upgrade
 cd dotfiles
 hx
+bash
+hx
+ls
+ls ~/.config/ghostty
+cd greenkeeper-api
+yarn dev
+opencode
+cd nix-config/
+ls ~/.icons
+ls ~/.icons.backup
+mv ~/.icons.backup ~/.icons
+ls ~/.config/gtk-3.0/
+mv ~/.config/gtk-3.0/settings.ini.backup ~/.config/gtk-3.0/settings.ini
+ls ~/.config/gtk-4.0/
+mv ~/.config/gtk-4.0/settings.ini.backup ~/.config/gtk-4.0/settings.ini
+reboot
+ls
+cd nix-config/
+gsettings get org.gnome.desktop.interface cursor-size
+gsettings get org.gnome.desktop.interface cursor-theme
+ls ~/.config/gtk-4.0/
+cat ~/.config/gtk-4.0/
+cat ~/.config/gtk-4.0/settings.ini
+gsettings get org.gnome.desktop.interface cursor-theme
+gsettings get org.gnome.desktop.interface cursor-size
+ls -la ~/.icons
+opencode
+ls
+cd dotfiles
+ghostty +list-fonts
+ghostty +list-fonts | find "Nerd Font"
+ls
+ls
+hx
+cd greenkeeper-api
+tail
+opencode
+opencode upgrade
+docker compose up -d
+tail -f storage/logs/laravel.log
+cd dotfiles
+hx
+ghostty --version
+opencode
+opencode upgrade
+php -m | grep intl
+systemctl suspend
+yarn format
+yarn dev
+yarn install
+opencode github install
+opencode
+opencode upgrade
+git blame -L
+git blame
+git blame -L 40,+1 resources/js/Home2/src/util/UnitConversion.js
+git blame resources/js/Home2/src/util/UnitConversion.js
+git blame -L 40,+1 resources/js/Home2/src/util/UnitConversion.js
+git blame
+git blame --porcelain -L 40,+1 resources/js/Home2/src/util/UnitConversion.js
+cd dotfiles
+cd dotfiles
+which hxpint.sh 
+echo $env.PATH
+str substring 7..
+"asdf" | str substring ..7
+"asdf" | str substring 7..
