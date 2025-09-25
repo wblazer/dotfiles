@@ -1,0 +1,12 @@
+alias lsa = ls -a
+alias lt = ls **
+alias ll = ls -l
+alias c = clear
+alias cat = batcat
+alias lzg = lazygit
+alias lzd = lazydocker
+alias pa = php artisan
+alias pas = php artisan serve
+alias kaboom = php artisan app:migrate:fresh --seed
+alias yd = yarn dev
+alias dup = docker compose up -d

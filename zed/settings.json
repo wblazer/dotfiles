@@ -45,7 +45,8 @@
   "current_line_highlight": "all",
   "cursor_blink": false,
   "auto_signature_help": true,
-  "expand_excerpt_lines": 4,
+  "expand_excerpt_lines": 10,
+  "excerpt_context_lines": 50,
   "scrollbar": {
     "cursors": true
   },
@@ -71,12 +72,7 @@
       "show_edit_predictions": false
     },
     "Ruby": {
-      "language_servers": [
-        "ruby-lsp",
-        "!solargraph",
-        "!rubocop",
-        "..."
-      ]
+      "language_servers": ["ruby-lsp", "!solargraph", "!rubocop", "..."]
     },
     "ERB": {
       "tab_size": 2
@@ -104,11 +100,7 @@
     },
     "PHP": {
       "show_edit_predictions": true,
-      "language_servers": [
-        "intelephense",
-        "!phpactor",
-        "..."
-      ],
+      "language_servers": ["intelephense", "!phpactor", "..."],
       "prettier": {
         "allowed": false
       }
@@ -144,18 +136,14 @@
           "ruby": "html"
         },
         "experimental": {
-          "classRegex": [
-            "\\bclass:\\s*['\"]([^'\"]*)['\"]"
-          ]
+          "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
         }
       }
     },
     "eslint": {
       "settings": {
         "codeActionOnSave": {
-          "rules": [
-            "import/order"
-          ]
+          "rules": ["import/order"]
         }
       }
     }
@@ -274,15 +262,10 @@
   },
   "edit_predictions": {
     "enabled_in_text_threads": false,
-    "disabled_globs": [
-      ".env"
-    ],
+    "disabled_globs": [".env"],
     "mode": "subtle"
   },
-  "edit_predictions_disabled_in": [
-    "comment",
-    "string"
-  ],
+  "edit_predictions_disabled_in": ["comment", "string"],
   "outline_panel": {
     "default_width": 300,
     "indent_size": 15

@@ -5,6 +5,9 @@ temperature: 0.4
 tools:
   write: false
   edit: false
+  bash: true
+permission:
+  bash: allow
 ---
 
 You are in debug mode. Perform an in-depth root cause analysis of the problem.

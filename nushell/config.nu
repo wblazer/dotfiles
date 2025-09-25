@@ -45,18 +45,10 @@ $env.PROMPT_INDICATOR_VI_NORMAL = " "
 $env.PROMPT_MULTILINE_INDICATOR = "::: "
 
 
-### Aliases
-alias lsa = ls -a
-alias lt = ls **
-alias ll = ls -l
-alias c = clear
-alias cat = batcat
-alias lzg = lazygit
-alias lzd = lazydocker
-
 $env.config.table.mode = 'rounded'
 
 use ($nu.default-config-dir | path join mise.nu)
 
+source ./aliases.nu
 source ~/.zoxide.nu
 
